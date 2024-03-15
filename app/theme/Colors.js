@@ -1,0 +1,17 @@
+export const color = {
+  orange: 'rgba(237, 114, 6, 1)',
+  rama: 'rgba(11, 146, 158, 1)',
+  black: 'rgba(0, 0, 0, 1)',
+  extralightblack: 'rgba(46, 46, 46, 1)',
+  gray: 'rgba(119, 119, 119, 1)',
+  lightblack: 'rgba(57, 57, 57, 1)',
+  semiblack: 'rgba(65, 65, 65, 1)',
+  semidarkblack: 'rgba(26, 26, 26, 1)',
+  semiorange: 'rgba(234, 99, 0, 1)',
+  parrotgreen: 'rgba(3, 217, 75, 1)',
+  lightorange: 'rgba(217, 157, 3, 1)',
+  lightgray: 'rgba(100, 100, 100, 1)',
+  darkblue: 'rgba(31, 81, 211, 1)',
+  red: 'rgba(251, 27, 27, 1)',
+  white: 'rgba(255, 255, 255, 1)',
+};
