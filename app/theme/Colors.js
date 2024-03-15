@@ -14,4 +14,5 @@ export const color = {
   darkblue: 'rgba(31, 81, 211, 1)',
   red: 'rgba(251, 27, 27, 1)',
   white: 'rgba(255, 255, 255, 1)',
+  lightwhite: 'rgba(241,241,241,1)',
 };
