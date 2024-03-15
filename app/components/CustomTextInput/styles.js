@@ -21,7 +21,9 @@ export const input2 = border => ({
 });
 
 export const view = () => ({
-  paddingHorizontal: size.moderateScale(25),
+  marginHorizontal: size.moderateScale(25),
+  borderRadius: size.moderateScale(7),
+  backgroundColor: 'white',
 });
 
 export const mainview = () => ({flexDirection: 'row'});
