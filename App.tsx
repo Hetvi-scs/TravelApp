@@ -1,13 +1,14 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
-import { images } from './app/theme'
+import { IcBlueDots, IcBluePlane, IcBookCabSearch, IcFilter, IcSearchIndicator, fontSize, images } from './app/theme'
+import CustomTextInput from './app/components/CustomTextInput'
 
 export default function App() {
   return (
-    <View>
-      <Text>App</Text>
-      <Image
-      source={images.food}/>
+    <View style={{ marginTop: 200 }}>
+      <CustomTextInput imgl={<IcBookCabSearch />} placeholder={'search'} imgr={<IcFilter />} />
+      <CustomTextInput imgl={<IcBookCabSearch />} placeholder={'search'} type={'main'} />
+      <CustomTextInput imgl={<IcBookCabSearch />} placeholder={'search'} type={'second'} />
     </View>
   )
 }
