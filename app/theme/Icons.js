@@ -41,6 +41,7 @@ import Multicity from './images/svg/Multicity';
 import OrangeMulticity from './images/svg/Orangemulticity';
 import Orangeaccount from './images/svg/Orangeaccount';
 import Trending from './images/svg/Trending';
+import Graycross from './images/svg/Graycross';
 import BlackStar from './images/svg/Balckstar';
 import Bank from './images/svg/Bank';
 import Call from './images/svg/Call';
@@ -96,6 +97,7 @@ export const IcGraymulticity=props=><Multicity {...props}/>
 export const IcOrangemulticity=props=><OrangeMulticity {...props}/>
 export const IcOrangeaccount=props=><Orangeaccount {...props}/>
 export const IcTrending=props=><Trending {...props}/>
+export const IcGraycross=props=><Graycross {...props}/>
 export const IcBlackstar=props=><BlackStar {...props}/>
 export const IcBank=props=><Bank {...props}/>
 export const IcCall=props=><Call {...props}/>
