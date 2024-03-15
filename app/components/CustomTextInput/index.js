@@ -1,7 +1,7 @@
-import {View, Text, TextInput} from 'react-native';
+import {View, Text, TextInput, Touchable, TouchableOpacity} from 'react-native';
 import React from 'react';
 import * as styles from './styles';
-import {color} from '../../theme';
+import {color, size} from '../../theme';
 
 export default function CustomTextInput({
   type,
@@ -13,39 +13,50 @@ export default function CustomTextInput({
   imgr,
   onpressr,
   border,
+  center,
+  secure,
 }) {
   return (
     <View style={styles.view()}>
       {type == 'main' ? (
         <TextInput
-          style={styles.input()}
+          style={styles.input(border)}
           placeholder={placeholder}
           keyboardType={keyboardType}
           numberOfLines={numberOfLines}
           onChangeText={OnChangeText}
+          textAlign={center}
+          secureTextEntry={secure}
         />
       ) : type == 'second' ? (
         <View style={styles.mainview()}>
           <View style={styles.view2()}>{imgl}</View>
           <TextInput
-            style={styles.input2()}
+            style={styles.input2(border)}
             placeholder={placeholder}
             keyboardType={keyboardType}
             numberOfLines={numberOfLines}
             onChangeText={OnChangeText}
+            textAlign={center}
+            secureTextEntry={secure}
           />
         </View>
       ) : (
         <View style={styles.mainview()}>
-          <View style={styles.view2()}>{imgl}</View>
-          <View style={styles.View3()}>{imgr}</View>
+          <View style={styles.view4()}>{imgl}</View>
+
           <TextInput
-            style={styles.input2()}
+            style={styles.input2(border)}
             placeholder={placeholder}
             keyboardType={keyboardType}
             numberOfLines={numberOfLines}
             onChangeText={OnChangeText}
+            textAlign={center}
+            secureTextEntry={secure}
           />
+          <TouchableOpacity style={styles.View3()}>
+            <View>{imgr}</View>
+          </TouchableOpacity>
         </View>
       )}
     </View>

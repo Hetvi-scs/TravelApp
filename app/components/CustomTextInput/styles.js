@@ -1,22 +1,23 @@
 import {color, fontSize, fonts, size} from '../../theme';
 
-export const input = () => ({
+export const input = border => ({
   paddingLeft: size.moderateScale(15),
-  borderColor: color.gray,
+  borderColor: border ? border : color.gray,
   borderRadius: size.moderateScale(6),
-  borderWidth: size.moderateScale(1),
+  borderWidth: border ? size.moderateScale(2) : size.moderateScale(1),
   fontFamily: fonts.PoppinsSemiBold,
-  // marginLeft: 10,
-  fontSize: fontSize.small,
+  color: color.black,
+  fontSize: fontSize.extrasmall,
 });
-export const input2 = () => ({
+export const input2 = border => ({
   flex: 1,
   paddingLeft: size.moderateScale(35),
-  borderColor: color.gray,
+  borderColor: border ? border : color.gray,
   borderRadius: size.moderateScale(6),
   borderWidth: size.moderateScale(1),
   fontFamily: fonts.PoppinsMedium,
-  fontSize: fontSize.small,
+  fontSize: fontSize.extrasmall,
+  color: color.black,
 });
 
 export const view = () => ({
@@ -34,8 +35,17 @@ export const view2 = () => ({
   position: 'absolute',
 });
 
+export const view4 = () => ({
+  height: size.moderateScale(40),
+  width: size.moderateScale(45),
+  marginVertical: size.moderateScale(4),
+  alignItems: 'center',
+  justifyContent: 'center',
+  position: 'absolute',
+});
+
 export const View3 = () => ({
-  height: size.moderateScale(47),
+  height: size.moderateScale(45),
   width: size.moderateScale(47),
   marginVertical: size.moderateScale(2),
   marginHorizontal: size.moderateScale(272),
