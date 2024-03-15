@@ -4,7 +4,10 @@ import React from 'react'
 export default function App() {
   return (
     <View>
-      <Text>App</Text>
+      
+      <Text>
+        Hey
+      </Text>
     </View>
   )
 }
