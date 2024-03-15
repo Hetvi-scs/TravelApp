@@ -14,13 +14,32 @@ export default function CustomButton({ type, text, onPress }) {
     );
   } else if (type === 'continue') {
     return (
-      <TouchableOpacity onPress={onPress}>
-        <View style={style.continue}>
-          <Text>{text}</Text>
+      <TouchableOpacity 
+      onPress={onPress}>
+        <View style={style.cont()}>
+          <Text style={style.continuetxt()}>{text}</Text>
         </View>
       </TouchableOpacity>
     );
-  } 
+  } else if (type === 'cancle') {
+    return (
+      <TouchableOpacity 
+      onPress={onPress}>
+        <View style={style.cancle()}>
+          <Text style={style.cancletxt()}>{text}</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  } else if (type === 'download') {
+    return (
+      <TouchableOpacity 
+      onPress={onPress}>
+        <View style={style.cont()}>
+          <Text style={style.downtxt()}>{text}</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  }
 //     return null; // Handle other types or return a default button
 //   }
 }
