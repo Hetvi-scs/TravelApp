@@ -11,6 +11,7 @@ export const color = {
   parrotgreen: 'rgba(3, 217, 75, 1)',
   lightorange: 'rgba(217, 157, 3, 1)',
   lightgray: 'rgba(100, 100, 100, 1)',
+  semigray: 'rgba(73, 73, 73, 0.1)',
   darkblue: 'rgba(31, 81, 211, 1)',
   red: 'rgba(251, 27, 27, 1)',
   white: 'rgba(255, 255, 255, 1)',
