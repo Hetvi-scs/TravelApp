@@ -1,4 +1,4 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text } from 'react-native'
 import React from 'react'
 import { IcBlueDots, IcBluePlane, IcBookCabSearch, IcFilter, IcOppositeArrow, IcOrangetrains, IcSearch, IcSearchIndicator, color, fontSize, images } from './app/theme'
 import CustomTextInput from './app/components/CustomTextInput'
