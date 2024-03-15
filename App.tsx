@@ -6,8 +6,6 @@ export default function App() {
   return (
     <View>
       <Text>App</Text>
-      <Image
-      source={images.food}/>
     </View>
   )
 }

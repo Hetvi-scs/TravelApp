@@ -20,6 +20,78 @@ import LongRightBlueArrow from './images/svg/LongRightBlueArrow';
 import OppositeArrow from './images/svg/OppositeArrow';
 import SearchIndicator from './images/svg/SearchIndicator';
 import TrustedPart from './images/svg/TrustedPart';
+import Beach from './images/svg/Beach';
+import Biggraystar from './images/svg/Biggraystar';
+import Food from './images/svg/Food';
+import Grayaccount from './images/svg/Grayaccount';
+import Whitetower from './images/svg/Whitetower';
+import Homesearch from './images/svg/Homesearch';
+import Orangeplane from './images/svg/Orangeplane';
+import Orangehotel from './images/svg/Orangehotel';
+import Orangetrain from './images/svg/Orangetrain';
+import Orangebus from './images/svg/Orangebus';
+import Orangecab from './images/svg/Orangecab';
+import Viewallarrow from './images/svg/Viewallarrow';
+import Orangehome from './images/svg/Orangehome';
+import Grayhome from './images/svg/Grayhome';
+import Graynotification from './images/svg/Graynotification';
+import Graysuitcase from './images/svg/Graysuitcase';
+import Orangemytrips from './images/svg/Orangemytrips';
+import Multicity from './images/svg/Multicity';
+import OrangeMulticity from './images/svg/Orangemulticity';
+import Orangeaccount from './images/svg/Orangeaccount';
+import Trending from './images/svg/Trending';
+
+
+
+
+
+
+export const IcBeach = props=> <Beach {...props}/>;
+export const IcBiggraystar = props=><Biggraystar {...props}/>
+export const IcFood=props=><Food {...props}/>
+export const IcGrayaccount=props=><Grayaccount/>
+export const IcGrayCalendar=props=><GrayCalender {...props}/>
+export const IcWhitetower=props=><Whitetower/>
+export const IcSearch=props=> <Homesearch {...props}/>
+export const IcOrangeflight=props=><Orangeplane {...props}/>
+export const IcOrangehotel=props=><Orangehotel {...props}/>
+export const IcOrangetrains=props=><Orangetrain {...props}/>
+export const IcOrangebuses=props=><Orangebus {...props}/>
+export const IcOrangecabs=props=><Orangecab {...props}/>
+export const IcViewall=props=><Viewallarrow {...props}/>
+export const IcRatingGray=props=><IcRatingGray {...props}/>
+export const IcOrangehome=props=><Orangehome {...props}/>
+export const IcGrayhome=props=><Grayhome {...props}/>
+export const IcGraynotification=props=><Graynotification {...props}/>
+export const IcGraymytrips=props=><Graysuitcase {...props}/>
+export const IcOrangesuitcase=props=><Orangemytrips {...props}/>
+export const IcGraymulticity=props=><Multicity {...props}/>
+export const IcOrangemulticity=props=><OrangeMulticity {...props}/>
+export const IcOrangeaccount=props=><Orangeaccount {...props}/>
+export const IcTrending=props=><Trending {...props}/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const IcBlueDots = props => <BlueDots {...props} />;
 export const IcBluePlane = props => <BluePlane {...props} />;
