@@ -41,6 +41,7 @@ import Multicity from './images/svg/Multicity';
 import OrangeMulticity from './images/svg/Orangemulticity';
 import Orangeaccount from './images/svg/Orangeaccount';
 import Trending from './images/svg/Trending';
+import Graycross from './images/svg/Graycross';
 
 
 
@@ -70,6 +71,7 @@ export const IcGraymulticity=props=><Multicity {...props}/>
 export const IcOrangemulticity=props=><OrangeMulticity {...props}/>
 export const IcOrangeaccount=props=><Orangeaccount {...props}/>
 export const IcTrending=props=><Trending {...props}/>
+export const IcGraycross=props=><Graycross {...props}/>
 
 
 
