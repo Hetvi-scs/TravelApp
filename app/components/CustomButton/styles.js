@@ -20,6 +20,7 @@ export const cont = () => ({
     borderRadius: size.moderateScale(8),
     justifyContent: 'center',
     alignItems: 'center',
+    elevation:15
   });
   export const continuetxt = () => ({
     color:color.white,
@@ -45,3 +46,56 @@ export const cont = () => ({
     fontFamily: fonts.PoppinsMedium,
     fontSize: fontSize.large,
   });
+
+  export const sort = () => ({
+    borderWidth:1.2,
+    borderColor:color.rama,
+     height: size.moderateScale(42),
+     borderRadius: size.moderateScale(8),
+     justifyContent: 'center',
+     alignItems: 'center',
+     });
+     export const sorttxt = () => ({
+       color:color.semiblack,
+       fontFamily: fonts.PoppinsSemiBold,
+       fontSize: fontSize.large,
+     });
+
+     export const male = () => ({
+        backgroundColor: color.rama,
+        height: size.moderateScale(43),
+        justifyContent: 'center',
+        alignItems: 'center',
+      });
+      export const maletxt = () => ({
+        color:color.white,
+        fontFamily: fonts.PoppinsMedium,
+        fontSize: fontSize.large,
+      });
+
+      
+     export const female = () => ({
+        borderWidth:0.9,
+        borderColor:color.gray,
+        height: size.moderateScale(43),
+        justifyContent: 'center',
+        alignItems: 'center',
+      });
+      export const femaletxt = () => ({
+        color:color.black,
+        fontFamily: fonts.PoppinsMedium,
+        fontSize: fontSize.large,
+      });
+
+      export const help = () => ({
+        backgroundColor: color.rama,
+        height: size.moderateScale(43),
+        borderRadius: size.moderateScale(8),
+        justifyContent: 'center',
+        alignItems: 'center',
+      });
+      export const helptxt = () => ({
+        color:color.white,
+        fontFamily: fonts.PoppinsMedium,
+        fontSize: fontSize.medium,
+      });

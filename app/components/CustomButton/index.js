@@ -39,7 +39,43 @@ export default function CustomButton({ type, text, onPress }) {
         </View>
       </TouchableOpacity>
     );
+  }else if (type === 'sort') {
+    return (
+      <TouchableOpacity 
+      onPress={onPress}>
+        <View style={style.sort()}>
+          <Text style={style.sorttxt()}>{text}</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  } else if (type === 'male') {
+    return (
+      <TouchableOpacity 
+      onPress={onPress}>
+        <View style={style.male()}>
+          <Text style={style.maletxt()}>{text}</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  }else if (type === 'female') {
+    return (
+      <TouchableOpacity 
+      onPress={onPress}>
+        <View style={style.female()}>
+          <Text style={style.femaletxt()}>{text}</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  }else if (type === 'help') {
+    return (
+      <TouchableOpacity 
+      onPress={onPress}>
+        <View style={style.help()}>
+          <Text style={style.helptxt()}>{text}</Text>
+        </View>
+      </TouchableOpacity>
+    );
   }
-//     return null; // Handle other types or return a default button
+//     return null; 
 //   }
 }
