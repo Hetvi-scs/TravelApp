@@ -1,7 +1,6 @@
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {
-
   IcLocation,
   IcTrustedPart,
   IcWhiteheart,
@@ -14,13 +13,27 @@ import {
 import CustomReview2 from '../CustomeReview2';
 import CustomButton from '../CustomButton';
 
-
-export default function CustomeHotel({type}) {
+export default function CustomeHotel({
+  type,
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  rtxt,
+  price,
+  pernight,
+  count,
+  location,
+  distance,
+  brftxt,
+  btntxt,
+}) {
   return (
     <View>
       <View
         style={{
-          height: size.moderateScale(320),
+          height: size.moderateScale(340),
           marginHorizontal: size.moderateScale(25),
           borderRadius: 8,
           backgroundColor: color.white,
@@ -29,10 +42,10 @@ export default function CustomeHotel({type}) {
           style={{
             flexDirection: 'row',
             marginVertical: size.moderateScale(5),
-            marginHorizontal: size.moderateScale(1),
+            marginHorizontal: size.moderateScale(4),
           }}>
           <Image
-            source={images.palace}
+            source={img1}
             style={{
               height: size.moderateScale(135),
               width: size.moderateScale(105),
@@ -50,16 +63,16 @@ export default function CustomeHotel({type}) {
           </View>
           <View style={{flexDirection: 'column', marginHorizontal: 6}}>
             <Image
-              source={images.pool}
+              source={img2}
               style={{
-                width:size.moderateScale(96), 
+                width: size.moderateScale(96),
                 height: size.moderateScale(62),
                 borderRadius: 6,
               }}></Image>
             <Image
-              source={images.dinner}
+              source={img3}
               style={{
-                width:size.moderateScale(96),
+                width: size.moderateScale(96),
                 height: size.moderateScale(62),
                 borderRadius: 6,
 
@@ -68,39 +81,39 @@ export default function CustomeHotel({type}) {
           </View>
           <View style={{flexDirection: 'column', marginHorizontal: 1}}>
             <Image
-              source={images.lobby}
+              source={img4}
               style={{
                 width: size.moderateScale(96),
-                height:size.moderateScale(62),
+                height: size.moderateScale(62),
                 borderRadius: 6,
               }}></Image>
             <View
               style={{
                 justifyContent: 'center',
                 alignItems: 'center',
-                
+
                 borderWidth: 1.5,
                 borderRadius: 6,
-                width:size.moderateScale (99),
-                height:size.moderateScale (64),
+                width: size.moderateScale(99),
+                height: size.moderateScale(64),
                 marginVertical: 10,
               }}>
               <Image
-                source={images.beach}
+                source={img5}
                 style={{
                   width: size.moderateScale(98),
-                  height:size.moderateScale(62) ,
+                  height: size.moderateScale(62),
                   borderRadius: 6,
-                  resizeMode:'cover',
+                  resizeMode: 'cover',
                 }}></Image>
               <View
                 style={{
                   position: 'absolute',
                   width: size.moderateScale(96),
                   height: size.moderateScale(64),
-                  backgroundColor:'rgba(0, 0, 0, 0.2)',
-                  justifyContent:'center',
-                  alignItems:'center',
+                  backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                  justifyContent: 'center',
+                  alignItems: 'center',
                   borderRadius: 6,
                   elevation: 100,
                 }}>
@@ -110,14 +123,18 @@ export default function CustomeHotel({type}) {
                     color: color.white,
                     fontSize: fontSize.large,
                   }}>
-                  +38
+                  {count}
                 </Text>
               </View>
             </View>
           </View>
         </View>
 
-        <View style={{flexDirection: 'row'}}>
+        <View
+          style={{
+            flexDirection: 'row',
+            marginHorizontal: size.moderateScale(5),
+          }}>
           <CustomReview2 type={type}></CustomReview2>
           <View
             style={{
@@ -125,21 +142,38 @@ export default function CustomeHotel({type}) {
               width: 4,
               backgroundColor: color.gray,
               marginVertical: 7,
-              marginHorizontal: 5,
+              marginHorizontal: 7,
               borderRadius: 8,
+              flexDirection:'row'
             }}></View>
           <Text
             style={{
               fontSize: fontSize.extrasmall,
               fontFamily: fonts.PoppinsLight,
             }}>
-            Excellent 200 reviews
+            Excellent
+          </Text>
+          <Text
+            style={{
+              fontSize: fontSize.extrasmall,
+              fontFamily: fonts.PoppinsLight,
+              marginHorizontal:size.moderateScale(5)
+            }}>
+                {rtxt} 
+          </Text>
+          <Text
+            style={{
+              fontSize: fontSize.extrasmall,
+              fontFamily: fonts.PoppinsLight,
+             
+            }}>
+                reviews 
           </Text>
           <View style={{flexDirection: 'column'}}>
             <View
               style={{
                 flexDirection: 'row',
-                marginHorizontal: size.moderateScale(65),
+                marginHorizontal: size.moderateScale(58),
               }}>
               <Text
                 style={{
@@ -155,10 +189,10 @@ export default function CustomeHotel({type}) {
                   color: color.black,
                   fontFamily: fonts.PoppinsBold,
                 }}>
-                174.7
+                {price}
               </Text>
             </View>
-            <View style={{marginHorizontal: size.moderateScale(67)}}>
+            <View style={{marginHorizontal: size.moderateScale(60)}}>
               <Text
                 style={{
                   fontSize: size.moderateScale(10),
@@ -187,7 +221,7 @@ export default function CustomeHotel({type}) {
                 color: color.black,
                 marginVertical: size.moderateScale(-5),
               }}>
-              The Leela palace - New Delhi
+              {location}
             </Text>
           </View>
           <View
@@ -201,7 +235,17 @@ export default function CustomeHotel({type}) {
                 color: color.gray,
                 fontFamily: fonts.PoppinsLight,
               }}>
-              Chanakyapuri | 8.6 km from T1 Delhi Airport (IGI Airport)
+              {distance}
+            </Text>
+          </View>
+          <View style={{marginHorizontal: size.moderateScale(8)}}>
+            <Text
+              style={{
+                color: color.lightblue,
+                fontFamily: fonts.PoppinsBold,
+                fontSize: fontSize.extrasmall,
+              }}>
+              {brftxt}
             </Text>
           </View>
           <View
@@ -209,20 +253,20 @@ export default function CustomeHotel({type}) {
               flexDirection: 'row',
               alignItems: 'center',
               width: size.moderateScale(340),
-              backgroundColor:'red'
+             
             }}>
             <View
               style={{
                 width: size.moderateScale(81),
                 marginVertical: size.moderateScale(10),
-                marginHorizontal: size.moderateScale(1),
+                marginHorizontal: size.moderateScale(5),
               }}>
-              <CustomButton type={'continue'} text={'Book Now'}></CustomButton>
+              <CustomButton type={'continue'} text={btntxt}></CustomButton>
             </View>
             <View
               style={{
                 flexDirection: 'row',
-                marginHorizontal: size.moderateScale(115),
+                marginHorizontal: size.moderateScale(129.7),
               }}>
               <IcTrustedPart width={15} />
               <Text
