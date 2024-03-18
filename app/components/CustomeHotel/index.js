@@ -52,15 +52,15 @@ export default function CustomeHotel({type}) {
             <Image
               source={images.pool}
               style={{
-                width: 106,
-                height: 66,
+                width:size.moderateScale(96), 
+                height: size.moderateScale(62),
                 borderRadius: 6,
               }}></Image>
             <Image
               source={images.dinner}
               style={{
-                width: 106,
-                height: 66,
+                width:size.moderateScale(96),
+                height: size.moderateScale(62),
                 borderRadius: 6,
 
                 marginVertical: 11,
@@ -70,32 +70,38 @@ export default function CustomeHotel({type}) {
             <Image
               source={images.lobby}
               style={{
-                width: 106,
-                height: 66,
+                width: size.moderateScale(96),
+                height:size.moderateScale(62),
                 borderRadius: 6,
               }}></Image>
             <View
               style={{
                 justifyContent: 'center',
                 alignItems: 'center',
-
-                borderWidth: 1,
+                
+                borderWidth: 1.5,
                 borderRadius: 6,
-                width: 108,
-                height: 68,
+                width:size.moderateScale (99),
+                height:size.moderateScale (64),
                 marginVertical: 10,
               }}>
               <Image
                 source={images.beach}
                 style={{
-                  width: 106,
-                  height: 66,
+                  width: size.moderateScale(98),
+                  height:size.moderateScale(62) ,
                   borderRadius: 6,
+                  resizeMode:'cover',
                 }}></Image>
               <View
                 style={{
                   position: 'absolute',
-                  shadowColor: color.black,
+                  width: size.moderateScale(96),
+                  height: size.moderateScale(64),
+                  backgroundColor:'rgba(0, 0, 0, 0.2)',
+                  justifyContent:'center',
+                  alignItems:'center',
+                  borderRadius: 6,
                   elevation: 100,
                 }}>
                 <Text
@@ -202,7 +208,8 @@ export default function CustomeHotel({type}) {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              // width: size.moderateScale(340),
+              width: size.moderateScale(340),
+              backgroundColor:'red'
             }}>
             <View
               style={{
@@ -215,14 +222,12 @@ export default function CustomeHotel({type}) {
             <View
               style={{
                 flexDirection: 'row',
-                marginHorizontal: size.moderateScale(123),
+                marginHorizontal: size.moderateScale(115),
               }}>
-              <IcTrustedPart width={35} />
-
-              
+              <IcTrustedPart width={15} />
               <Text
                 style={{
-                  fontSize: size.moderateScale(9),
+                  fontSize: size.moderateScale(10),
                   fontFamily: fonts.PoppinsSemiBold,
                 }}>
                 Trusted Partner
