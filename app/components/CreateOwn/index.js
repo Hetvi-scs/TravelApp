@@ -3,85 +3,61 @@ import React from 'react';
 import {
   IcBlueDots,
   IcBluePlane,
-  IcLocation,
-  color,
-  fontSize,
-  fonts,
-  size,
+  IcBluelocation,
+  IcCalenderBlue,
+  IcOppositeArrow,
 } from '../../theme';
+import * as styles from './styles';
 
-export default function CreateOwn() {
+export default function CreateOwn({
+  label,
+  arrive,
+  depart,
+  sarrive,
+  sdepart,
+  date,
+}) {
   return (
-    <View
-      style={{
-        marginHorizontal: size.moderateScale(25),
-        height: size.moderateScale(192),
-        borderWidth: size.moderateScale(1),
-        borderColor: color.lightwhite,
-        borderRadius: size.moderateScale(8),
-      }}>
-      <View
-        style={{
-          height: size.moderateScale(50),
-          borderBottomColor: color.lightwhite,
-          borderBottomWidth: size.moderateScale(2),
-          justifyContent: 'center',
-        }}>
-        <Text
-          style={{
-            fontSize: fontSize.medium,
-            fontFamily: fonts.PoppinsMedium,
-            color: color.extralightblack,
-            marginHorizontal: size.moderateScale(10),
-          }}>
-          Flight 1
-        </Text>
+    <View style={styles.MainView()}>
+      <View style={styles.View()}>
+        <Text style={styles.txt()}>{label}</Text>
       </View>
       <View>
-        <View
-          style={{
-            height: size.moderateScale(80),
-            // backgroundColor: 'blue',
-            flexDirection: 'row',
-          }}>
-          <View
-            style={{
-              width: '16%',
-              height: '100%',
-              borderWidth: 1,
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            <IcBluePlane />
-            <IcBlueDots />
-            {/* <IcB /> */}
+        <View style={styles.flexView()}>
+          <View style={styles.mview1()}>
+            <View style={styles.center()}>
+              <IcBluePlane />
+              <IcBlueDots />
+              <IcBluelocation />
+            </View>
           </View>
-          <View
-            style={{
-              flex: 1,
-              height: '100%',
-              flexDirection: 'row',
-            }}>
-            <View
-              style={{
-                flex: 1,
-                height: '50%',
-                backgroundColor: 'white',
-              }}></View>
-            <View></View>
+          <View style={styles.flex()}>
+            <View style={styles.mview2()}>
+              <View style={styles.mview3()}>
+                <Text style={styles.txt1()}>{sarrive}</Text>
+                <Text style={styles.txt2()}>{arrive}</Text>
+              </View>
+              <View style={styles.row()}>
+                <Text style={styles.txt1()}>{sdepart}</Text>
+                <Text style={styles.txt2()}>{depart}</Text>
+              </View>
+            </View>
           </View>
-          <View
-            style={{
-              width: '20%',
-              height: '100%',
-              backgroundColor: 'yellow',
-            }}></View>
+          <View style={styles.lview()}>
+            <View style={styles.lview2()}>
+              <IcOppositeArrow />
+            </View>
+          </View>
         </View>
-        <View
-          style={{
-            height: size.moderateScale(60),
-            backgroundColor: 'red',
-          }}></View>
+        <View style={styles.lviewtxt()}>
+          <View style={styles.center2()}>
+            <IcCalenderBlue />
+          </View>
+          <View style={styles.padding()}>
+            <Text style={styles.ltxt1()}>Depart</Text>
+            <Text style={styles.ltxt2()}>{date}</Text>
+          </View>
+        </View>
       </View>
     </View>
   );
