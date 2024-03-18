@@ -68,6 +68,10 @@ import Wallet from './images/svg/Wallet';
 import Whishlist from './images/svg/Whishlist';
 import Emergency from './images/svg/Emergency';
 import Phonepay from './images/svg/Phonepay';
+import Halfgraystar from './images/svg/Halfgraystar';
+import Graysinglestar from './images/svg/Graysinglestar';
+import Whiteheart from './images/svg/Whiteheart';
+import Bluelocation from './images/svg/Bluelocation';
 
 
 
@@ -124,7 +128,14 @@ export const IcWallet=props=><Wallet {...props}/>
 export const IcWhishlist=props=><Whishlist {...props}/>
 export const IcEmergency=props=><Emergency {...props}/>
 export const IcPhonepay=props=><Phonepay {...props}/>
+export const IcHalfgraystar=props=><Halfgraystar {...props}/>
+export const IcGraysinglestar=props=><Graysinglestar {...props}/>
+export const IcWhiteheart=props=><Whiteheart {...props}/>
 
+
+
+
+export const IcBluelocation=props=><Bluelocation {...props}/>
 
 
 
@@ -134,24 +145,6 @@ export const IcPhonepay=props=><Phonepay {...props}/>
 
 
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

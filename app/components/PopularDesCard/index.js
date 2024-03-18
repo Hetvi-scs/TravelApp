@@ -1,11 +1,14 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import * as style from './style'
-import { IcGreenActiveStar, IcGreenHalfStar, images } from '../../theme'
+import { IcGreenActiveStar, IcGreenHalfStar, fontSize, images, size } from '../../theme'
+import CustomReview2 from '../CustomeReview2'
 
 export default function PopularDesCrad() {
   return (
-<View>
+<View style={style.container()}>
+
+
    <View style={style.mainimage()}>
         <View style={style.bigimageview()}>
             <Image
@@ -47,11 +50,35 @@ export default function PopularDesCrad() {
             </View>   
      </View>
      </View>
+
    </View>
+
+<View style={style.secmain()}>
+{/* <View style={{justifyContent:'center',alignItems:'center',marginTop:15}}>
+   <CustomReview2/>
+    <View 
+    style={style.dotview()}>   
+    </View>
+   
+    </View>
+    <View style={style.reviewtxt()}> 
+    <Text>Very good 200 Reviews</Text>
+    <Text>Starting at $40.7</Text>
+    </View> */}
+       <View style={style.leftview()}>
+           <View style={style.starview}><CustomReview2/></View>
+            <View 
+             style={style.dotview()}>   
+            </View>
+            <View><Text style={style.reviewtxt()}>Very good 200 Reviews</Text>
+            </View>
+       </View>
+       <View style={style.rightview()}>
+       <Text>Starting at $40.7</Text>
+       </View>
+
+</View>
   
-   <View>
-    
-   </View>
 </View>  
   )
 }
