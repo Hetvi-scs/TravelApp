@@ -1,7 +1,7 @@
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {
-  IcHeaderBackArrow,
+
   IcLocation,
   IcTrustedPart,
   IcWhiteheart,
@@ -13,7 +13,7 @@ import {
 } from '../../theme';
 import CustomReview2 from '../CustomeReview2';
 import CustomButton from '../CustomButton';
-import Customheader from '../CustomHeader';
+
 
 export default function CustomeHotel({type}) {
   return (
@@ -219,6 +219,7 @@ export default function CustomeHotel({type}) {
               }}>
               <IcTrustedPart width={35} />
 
+              
               <Text
                 style={{
                   fontSize: size.moderateScale(9),
