@@ -15,7 +15,7 @@ export default function Customheader({
  {
     return (
     <View>
-        <View style={{flexDirection:'row', marginTop:30, marginHorizontal:size.moderateScale(25), justifyContent:'space-between'}}>
+        <View style={{flexDirection:'row', marginTop:size.moderateScale(30), marginHorizontal:size.moderateScale(25), justifyContent:'space-between'}}>
         <View>
             {img}
         </View>
