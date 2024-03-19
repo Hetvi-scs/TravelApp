@@ -8,7 +8,9 @@ import Upcomingcard from './app/components/Upcomingcard';
 export default function Home() {
   return (
     <View>
-     <Upcomingcard/>
+     <Text>
+      App
+     </Text>
     </View>
   );
 }
