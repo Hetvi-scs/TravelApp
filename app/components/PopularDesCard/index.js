@@ -1,3 +1,90 @@
+// import { View, Text, Image } from 'react-native'
+// import React from 'react'
+// import * as style from './style'
+// import { IcGreenActiveStar, IcGreenHalfStar, fontSize, images, size } from '../../theme'
+// import CustomReview2 from '../CustomeReview2'
+
+// export default function PopularDesCrad() {
+//   return (
+// <View style={style.container()}>
+
+
+//    <View style={style.mainimage()}>
+//         <View style={style.bigimageview()}>
+//             <Image
+//                 source={images.delhitemple}
+//                 style={style.bigimage()}
+//             />
+//         </View>
+
+// <View style={style.fourimageview()}>
+//     <View style={style.firsttwoimg()}>
+//            <View style={style.firstview()}>
+//            <Image
+//                 source={images.building}
+//                 style={style.oneimg()}
+//             />
+//            </View>
+//            <View style={style.secondview()}>
+//             <Image
+//                 source={images.tajmahal}
+//                 style={style.twoimg()}
+//             />
+//             </View>
+//      </View>
+
+//      <View style={style.secondtwoimg()}>
+//          <View style={style.thirdview()}>
+//             <Image
+//                 source={images.people}
+//                 style={style.threeimg()}
+//             />
+//             </View>
+//             <View style={style.fourthview()}>
+//             <Image
+//                 source={images.memorial}
+//                 style={style.threeimg()}
+//             />
+//             <View style={style.imgtxtview()}>
+//             <Text style={style.imgtxt()}>+40</Text></View>
+//             </View>   
+//      </View>
+//      </View>
+
+//    </View>
+
+// <View style={style.secmain()}>
+// {/* <View style={{justifyContent:'center',alignItems:'center',marginTop:15}}>
+//    <CustomReview2/>
+//     <View 
+//     style={style.dotview()}>   
+//     </View>
+   
+//     </View>
+//     <View style={style.reviewtxt()}> 
+//     <Text>Very good 200 Reviews</Text>
+//     <Text>Starting at $40.7</Text>
+//     </View> */}
+//        <View style={style.leftview()}>
+//            <View style={style.starview}><CustomReview2/></View>
+//             <View 
+//              style={style.dotview()}>   
+//             </View>
+//             <View><Text style={style.reviewtxt()}>Very good 200 Reviews</Text>
+//             </View>
+//        </View>
+//        <View style={style.rightview()}>
+//        <Text>Starting at $40.7</Text>
+//        </View>
+
+// </View>
+  
+// </View>  
+//   )
+// }
+
+//************************************************************************
+
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {
@@ -13,7 +100,7 @@ import {
 import CustomReview2 from '../CustomeReview2';
 import CustomButton from '../CustomButton';
 
-export default function CustomeHotel({
+export default function PopularDesCrad({
   type,
   img1,
   img2,
@@ -22,21 +109,24 @@ export default function CustomeHotel({
   img5,
   rtxt,
   price,
-  
+  pernight,
   count,
   location,
   distance,
   brftxt,
   btntxt,
+  days
 }) {
   return (
     <View>
       <View
         style={{
-          height: size.moderateScale(340),
+          height: size.moderateScale(275),
           marginHorizontal: size.moderateScale(25),
           borderRadius: 8,
           backgroundColor: color.white,
+        // backgroundColor:'rgb(177, 246, 186)',
+
         }}>
         <View
           style={{
@@ -83,7 +173,7 @@ export default function CustomeHotel({
             <Image
               source={img4}
               style={{
-                width: size.moderateScale(96),
+                width: size.moderateScale(99),
                 height: size.moderateScale(62),
                 borderRadius: 6,
               }}></Image>
@@ -134,13 +224,12 @@ export default function CustomeHotel({
           style={{
             flexDirection: 'row',
             marginHorizontal: size.moderateScale(5),
-          
           }}>
           <CustomReview2 type={type}></CustomReview2>
           <View
             style={{
-              height: 4,
-              width: 4,
+              height: 3,
+              width: 3,
               backgroundColor: color.gray,
               marginVertical: 7,
               marginHorizontal: 7,
@@ -149,24 +238,26 @@ export default function CustomeHotel({
             }}></View>
           <Text
             style={{
-              fontSize: fontSize.extrasmall,
+              fontSize: size.moderateScale(10),
               fontFamily: fonts.PoppinsLight,
+              color:color.black
             }}>
-            Excellent
+            Very good
           </Text>
           <Text
             style={{
-              fontSize: fontSize.extrasmall,
+              fontSize: size.moderateScale(10),
               fontFamily: fonts.PoppinsLight,
-              marginHorizontal:size.moderateScale(5)
+              marginHorizontal:size.moderateScale(5),
+              color:color.black
             }}>
                 {rtxt} 
           </Text>
           <Text
             style={{
-              fontSize: fontSize.extrasmall,
+              fontSize: size.moderateScale(10),
               fontFamily: fonts.PoppinsLight,
-             
+              color:color.black
             }}>
                 reviews 
           </Text>
@@ -174,71 +265,99 @@ export default function CustomeHotel({
             <View
               style={{
                 flexDirection: 'row',
-                marginHorizontal: size.moderateScale(58),
+                marginHorizontal: size.moderateScale(20),
               }}>
               <Text
                 style={{
-                  fontSize: fontSize.medium,
+                  fontSize: size.moderateScale(12),
+                  fontFamily: fonts.PoppinsRegular,
+                  color: color.lightgray,
+                }}>
+               Starting at
+              </Text>
+              <Text
+                style={{
+                  fontSize: fontSize.extrasmall,
                   color: color.black,
-                  fontFamily: fonts.PoppinsBold,
+                  fontFamily: fonts.PoppinsMedium,
                 }}>
                 $
               </Text>
               <Text
                 style={{
-                  fontSize: fontSize.medium,
+                  fontSize: fontSize.extrasmall,
                   color: color.black,
-                  fontFamily: fonts.PoppinsBold,
+                  fontFamily: fonts.PoppinsMedium,
                 }}>
                 {price}
               </Text>
             </View>
             <View style={{marginHorizontal: size.moderateScale(60)}}>
-              <Text
-                style={{
-                  fontSize: size.moderateScale(10),
-                  fontFamily: fonts.PoppinsLight,
-                  color: color.lightgray,
-                }}>
-                Per Night
-              </Text>
+              
             </View>
           </View>
         </View>
 
         <View style={{flexDirection: 'column', marginVertical: 10}}>
+        <View style={{
+            flexDirection:'row'
+        }}>
           <View
             style={{
               marginHorizontal: size.moderateScale(5),
 
               flexDirection: 'row',
-              marginVertical: size.moderateScale(-10),
+              marginVertical: size.moderateScale(5),
+            //   backgroundColor:'purple',
+              width:200
             }}>
             <IcLocation width={15} />
             <Text
               style={{
                 fontSize: fontSize.small,
-                fontFamily: fonts.PoppinsBold,
+                fontFamily: fonts.PoppinsMedium,
                 color: color.black,
                 marginVertical: size.moderateScale(-5),
+                // backgroundColor:'red'
               }}>
               {location}
             </Text>
+
+           
           </View>
-          <View
+           <View
             style={{
-              width: size.moderateScale(220),
-              marginHorizontal: size.moderateScale(8),
+            //   width: size.moderateScale(80),
+              marginHorizontal: size.moderateScale(55),
+            //   backgroundColor:'yellow',
+            //   alignItems:'flex-end'
             }}>
+         <View 
+         style={{
+          flexDirection:'row'
+         }}
+         >   
+            <Text
+            style={{
+              fontSize: size.moderateScale(12),
+              fontFamily: fonts.PoppinsLight,
+              marginHorizontal:size.moderateScale(5),
+              color:color.black
+            }}>
+            {days} 
+          </Text>
             <Text
               style={{
                 fontSize: fontSize.extrasmall,
                 color: color.gray,
                 fontFamily: fonts.PoppinsLight,
               }}>
-              {distance}
+             days tour
             </Text>
+         </View>
           </View>
+</View>
+          {/* ----------------------------- */}
           <View style={{marginHorizontal: size.moderateScale(8)}}>
             <Text
               style={{
@@ -258,8 +377,8 @@ export default function CustomeHotel({
             }}>
             <View
               style={{
-                width: size.moderateScale(81),
-                marginVertical: size.moderateScale(10),
+                width: size.moderateScale(95),
+                marginVertical: size.moderateScale(-15),
                 marginHorizontal: size.moderateScale(5),
               }}>
               <CustomButton type={'booknow'} text={btntxt}></CustomButton>
@@ -267,13 +386,14 @@ export default function CustomeHotel({
             <View
               style={{
                 flexDirection: 'row',
-                marginHorizontal: size.moderateScale(129.7),
+                marginHorizontal: size.moderateScale(112),
               }}>
-              <IcTrustedPart width={15} />
+              <IcTrustedPart width={19} />
               <Text
                 style={{
                   fontSize: size.moderateScale(10),
                   fontFamily: fonts.PoppinsSemiBold,
+                  color:color.black
                 }}>
                 Trusted Partner
               </Text>
