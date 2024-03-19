@@ -12,7 +12,7 @@ export default function HomeCard2({price, src, type, number, place}) {
   const svgColor = isHovered ? 'red' : 'white';
   return (
     <View>
-      <View style={{marginHorizontal: 25}}>
+      <View>
         <Image
           source={src}
           style={{

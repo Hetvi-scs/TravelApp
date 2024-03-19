@@ -60,35 +60,41 @@ export default function Customheader({type, text, text1, text2, text3, img}) {
 
   if (type == 'second') {
     return (
-      <View>
+      <View style={{marginHorizontal:size.moderateScale(25), marginTop: size.moderateScale(20), }}>
         <View style={{}}>
           <View
             style={{
               flexDirection: 'row',
-              marginTop: size.moderateScale(30),
-              marginHorizontal: size.moderateScale(25),
+            // backgroundColor:'pink',
+            //  justifyContent:"center",
+             alignItems:'center',
+             alignContent:'flex-start'
+              // marginHorizontal: size.moderateScale(25),
             }}>
-            <View style={{marginTop: size.moderateScale(13)}}>{img}</View>
-            <View style={{}}>
-              <View style={{justifyContent: 'center'}}>
+            <View style={{position:'absolute',zIndex:2,height:size.moderateScale(20), width:size.moderateScale(20),marginLeft:size.moderateScale(20) }}>{img}</View>
+            <View style={{justifyContent:'center', alignItems:'center',flex:1}}>
+              
                 <Text
                   style={{
                     fontFamily: fonts.PoppinsBold,
-                    fontSize: fontSize.large,
-                    marginHorizontal: size.moderateScale(120),
-                    color: color.black,
+                    fontSize: fontSize.medium,
+                    textAlign:"center",
+                    // marginHorizontal: size.moderateScale(100),
+                    color: color.white,
+                    marginTop:15
+                    //alignSelf:'center'
                   }}>
                   {text}
                 </Text>
                 <Text style={{marginHorizontal: size.moderateScale(90)}}>
                   {text2}
                 </Text>
-              </View>
+                </View>
             </View>
-          </View>
+         
           <View
             style={{
-              marginTop: size.moderateScale(10),
+              marginTop: size.moderateScale(0-5),
               marginHorizontal: size.moderateScale(25),
             }}>
             <View
