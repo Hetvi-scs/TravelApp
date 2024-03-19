@@ -1,12 +1,12 @@
 import {View, Text} from 'react-native';
 import React from 'react';
-import Bottomtab from './app/navigation/bottomTabNavigation';
-import { NavigationContainer } from '@react-navigation/native';
+import SplashScreen from './app/screens/SplashScreen';
+import {color} from './app/theme';
 
 export default function Home() {
   return (
-   <NavigationContainer>
-      <Bottomtab/>
-      </NavigationContainer>
+    <View style={{flex: 1, backgroundColor: color.white}}>
+      <SplashScreen />
+    </View>
   );
 }

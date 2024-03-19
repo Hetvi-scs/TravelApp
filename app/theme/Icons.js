@@ -72,93 +72,64 @@ import Halfgraystar from './images/svg/Halfgraystar';
 import Graysinglestar from './images/svg/Graysinglestar';
 import Whiteheart from './images/svg/Whiteheart';
 import Bluelocation from './images/svg/Bluelocation';
+import Rightwhitearrow from './images/svg/Rightwhitearrow';
 
+export const IcRightwhitearrow = props => <Rightwhitearrow {...props} />;
+export const IcBeach = props => <Beach {...props} />;
+export const IcBiggraystar = props => <Biggraystar {...props} />;
+export const IcFood = props => <Food {...props} />;
+export const IcGrayaccount = props => <Grayaccount />;
+export const IcGrayCalendar = props => <GrayCalender {...props} />;
+export const IcWhitetower = props => <Whitetower />;
+export const IcSearch = props => <Homesearch {...props} />;
+export const IcOrangeflight = props => <Orangeplane {...props} />;
+export const IcOrangehotel = props => <Orangehotel {...props} />;
+export const IcOrangetrains = props => <Orangetrain {...props} />;
+export const IcOrangebuses = props => <Orangebus {...props} />;
+export const IcOrangecabs = props => <Orangecab {...props} />;
+export const IcViewall = props => <Viewallarrow {...props} />;
+export const IcRatingGray = props => <IcRatingGray {...props} />;
+export const IcOrangehome = props => <Orangehome {...props} />;
+export const IcGrayhome = props => <Grayhome {...props} />;
+export const IcGraynotification = props => <Graynotification {...props} />;
+export const IcGraymytrips = props => <Graysuitcase {...props} />;
+export const IcOrangesuitcase = props => <Orangemytrips {...props} />;
+export const IcGraymulticity = props => <Multicity {...props} />;
+export const IcOrangemulticity = props => <OrangeMulticity {...props} />;
+export const IcOrangeaccount = props => <Orangeaccount {...props} />;
+export const IcTrending = props => <Trending {...props} />;
+export const IcGraycross = props => <Graycross {...props} />;
+export const IcBlackstar = props => <BlackStar {...props} />;
+export const IcBank = props => <Bank {...props} />;
+export const IcCall = props => <Call {...props} />;
+export const IcCard = props => <Card {...props} />;
+export const IcCreditcard = props => <CreditCard {...props} />;
+export const IcCustomerService = props => <CustomerService {...props} />;
+export const IcEarthserach = props => <Earthsearch {...props} />;
+export const IcEmi = props => <Emi {...props} />;
+export const IcBigemergency = props => <BigEmergency {...props} />;
+export const IcExpenses = props => <Expenses {...props} />;
+export const IcGpay = props => <Gpay {...props} />;
+export const IcGrayrightlong = props => <Grayrightlong {...props} />;
+export const IcHospital = props => <Hospital {...props} />;
+export const IcMyTips = props => <MyTrips {...props} />;
+export const IcPolice = props => <Police {...props} />;
+export const IcPrimarycontect = props => <Primarycontect {...props} />;
+export const IcRightBlueArrow = props => <Rightbluearrow {...props} />;
+export const IcRightsideArrow = props => <Rigthsidearrow {...props} />;
+export const IcSavedpayments = props => <SavedPayments {...props} />;
+export const IcSecurepay = props => <Securepay {...props} />;
+export const IcSmile = props => <Smile {...props} />;
+export const IcUpi = props => <Upi {...props} />;
+export const IcWallet = props => <Wallet {...props} />;
+export const IcWhishlist = props => <Whishlist {...props} />;
+export const IcEmergency = props => <Emergency {...props} />;
+export const IcPhonepay = props => <Phonepay {...props} />;
+export const IcHalfgraystar = props => <Halfgraystar {...props} />;
+export const IcGraysinglestar = props => <Graysinglestar {...props} />;
+export const IcWhiteheart = props => <Whiteheart {...props} />;
 
-
-
-
-
-export const IcBeach = props=> <Beach {...props}/>;
-export const IcBiggraystar = props=><Biggraystar {...props}/>
-export const IcFood=props=><Food {...props}/>
-export const IcGrayaccount=props=><Grayaccount/>
-export const IcGrayCalendar=props=><GrayCalender {...props}/>
-export const IcWhitetower=props=><Whitetower/>
-export const IcSearch=props=> <Homesearch {...props}/>
-export const IcOrangeflight=props=><Orangeplane {...props}/>
-export const IcOrangehotel=props=><Orangehotel {...props}/>
-export const IcOrangetrains=props=><Orangetrain {...props}/>
-export const IcOrangebuses=props=><Orangebus {...props}/>
-export const IcOrangecabs=props=><Orangecab {...props}/>
-export const IcViewall=props=><Viewallarrow {...props}/>
-export const IcRatingGray=props=><IcRatingGray {...props}/>
-export const IcOrangehome=props=><Orangehome {...props}/>
-export const IcGrayhome=props=><Grayhome {...props}/>
-export const IcGraynotification=props=><Graynotification {...props}/>
-export const IcGraymytrips=props=><Graysuitcase {...props}/>
-export const IcOrangesuitcase=props=><Orangemytrips {...props}/>
-export const IcGraymulticity=props=><Multicity {...props}/>
-export const IcOrangemulticity=props=><OrangeMulticity {...props}/>
-export const IcOrangeaccount=props=><Orangeaccount {...props}/>
-export const IcTrending=props=><Trending {...props}/>
-export const IcGraycross=props=><Graycross {...props}/>
-export const IcBlackstar=props=><BlackStar {...props}/>
-export const IcBank=props=><Bank {...props}/>
-export const IcCall=props=><Call {...props}/>
-export const IcCard=props=><Card {...props}/>
-export const IcCreditcard=props=><CreditCard {...props}/>
-export const IcCustomerService=props=><CustomerService {...props}/>
-export const IcEarthserach=props=><Earthsearch {...props}/>
-export const IcEmi=props=><Emi {...props}/>
-export const IcBigemergency=props=><BigEmergency {...props}/>
-export const IcExpenses=props=><Expenses {...props}/>
-export const IcGpay=props=><Gpay {...props}/>
-export const IcGrayrightlong=props=><Grayrightlong {...props}/>
-export const IcHospital=props=><Hospital {...props}/>
-export const IcMyTips=props=><MyTrips {...props}/>
-export const IcPolice=props=><Police {...props}/>
-export const IcPrimarycontect=props=><Primarycontect {...props}/>
-export const IcRightBlueArrow=props=><Rightbluearrow {...props}/>
-export const IcRightsideArrow=props=><Rigthsidearrow {...props}/>
-export const IcSavedpayments=props=><SavedPayments {...props}/>
-export const IcSecurepay=props=><Securepay {...props}/>
-export const IcSmile=props=><Smile {...props}/>
-export const IcUpi=props=><Upi {...props}/>
-export const IcWallet=props=><Wallet {...props}/>
-export const IcWhishlist=props=><Whishlist {...props}/>
-export const IcEmergency=props=><Emergency {...props}/>
-export const IcPhonepay=props=><Phonepay {...props}/>
-export const IcHalfgraystar=props=><Halfgraystar {...props}/>
-export const IcGraysinglestar=props=><Graysinglestar {...props}/>
-export const IcWhiteheart=props=><Whiteheart {...props}/>
-
-
-
-
-export const IcBluelocation=props=><Bluelocation {...props}/>
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export const IcBluelocation = props => <Bluelocation {...props} />;
 
 export const IcBlueDots = props => <BlueDots {...props} />;
 export const IcBluePlane = props => <BluePlane {...props} />;
