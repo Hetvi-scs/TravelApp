@@ -25,7 +25,10 @@ import HomeCard2 from '../../components/HomeCard2';
 import * as styles from './styles';
 export default function Home() {
   const arra = [
-    {logo: <IcOrangeflight />, txt: 'Flight'},
+    {
+      logo: <IcOrangeflight fill={color.orange} height={40} />,
+      txt: 'Flight',
+    },
     {logo: <IcOrangehotel />, txt: 'Hotels'},
     {logo: <IcOrangetrains />, txt: 'Trains'},
     {logo: <IcOrangebuses />, txt: 'Buses'},
