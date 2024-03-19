@@ -1,13 +1,12 @@
-import * as React from "react"
-import Svg, { SvgProps, Path } from "react-native-svg"
-const Orangebus = (props) => (
+import * as React from 'react';
+import Svg, {SvgProps, Path} from 'react-native-svg';
+const Orangebus = props => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
+    width={26}
+    height={26}
     fill="none"
-    {...props}
-  >
+    {...props}>
     <Path
       fill="#EA6300"
       fillRule="evenodd"
@@ -15,5 +14,5 @@ const Orangebus = (props) => (
       clipRule="evenodd"
     />
   </Svg>
-)
-export default Orangebus
+);
+export default Orangebus;
