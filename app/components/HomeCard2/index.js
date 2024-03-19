@@ -60,6 +60,7 @@ export default function HomeCard2({price, src, type, number, place}) {
                   style={{
                     fontFamily: fonts.PoppinsMedium,
                     fontSize: fontSize.extrasmall,
+                    color: color.black,
                   }}>
                   {place}
                 </Text>
