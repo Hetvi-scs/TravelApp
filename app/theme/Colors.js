@@ -1,4 +1,4 @@
-export const color = {
+export const lightTheme = {
   orange: 'rgba(237, 114, 6, 1)',
   rama: 'rgba(11, 146, 158, 1)',
   black: 'rgba(0, 0, 0, 1)',
@@ -17,4 +17,24 @@ export const color = {
   white: 'rgba(255, 255, 255, 1)',
   lightwhite: 'rgba(241,241,241,1)',
   lightblue:'rgba(11, 146, 158, 1)'
+};
+
+export const darkTheme = {
+  orange: 'rgb(18, 141, 249)',
+  rama: 'rgb(244, 109, 97)',
+  black: 'rgb(255, 255, 255)',
+  extralightblack: 'rgb(209, 209, 209)',
+  gray: 'rgb(136, 136, 136)',
+  lightblack: 'rgb(198, 198, 198)',
+  semiblack: 'rgb(190, 190, 190)',
+  semidarkblack: 'rgb(229, 229, 229)',
+  semiorange: 'rgb(21, 156, 255)',
+  parrotgreen: 'rgb(252, 38, 180)',
+  lightorange: 'rgb(38, 98, 252)',
+  lightgray: 'rgb(155, 155, 155)',
+  semigray: 'rgb(182, 182, 182)',
+  darkblue: 'rgb(224, 174, 44)',
+  red: 'rgb(4, 228, 228)',
+  white: 'rgb(0, 0, 0)',
+  lightwhite: 'rgb(14, 14, 14)',
 };
