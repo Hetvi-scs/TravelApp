@@ -3,37 +3,20 @@ import {color, fontSize, fonts, size} from '../../theme';
 
 export const container = () => ({
     backgroundColor: color.white,
-    //   backgroundColor: 'rgb(160, 242, 155)',
-  //   height: size.moderateScale(300),
-    // borderRadius: size.moderateScale(8),
     marginHorizontal: size.moderateScale(25),
-    // flexDirection: 'row',
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
   });
 export const mainimage = () => ({
   backgroundColor: color.white,
-    // backgroundColor: 'yellow',
-//   height: size.moderateScale(300),
   borderRadius: size.moderateScale(8),
-//   marginHorizontal: size.moderateScale(25),
   flexDirection: 'row',
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
 });
 export const secmain = () => ({
-    // backgroundColor: color.white,
       backgroundColor: 'pink',
-    // height: size.moderateScale(300),
-    // borderRadius: size.moderateScale(8),
     marginHorizontal: size.moderateScale(8),
-    //   justifyContent: 'center',
       alignItems: 'center',
      marginVertical: size.moderateScale(18),
      flexDirection: 'row',
      justifyContent: 'center',
-    //   height:20
-
   });
 export const bigimage = () => ({
   height: size.moderateScale(139),
@@ -56,7 +39,6 @@ export const secondview = () => ({
   marginHorizontal: size.moderateScale(5),
 });
 export const thirdview = () => ({
-  // marginHorizontal:size.moderateScale(2),
   marginRight: size.moderateScale(1),
   flexDirection: 'row',
 });
@@ -106,18 +88,11 @@ export const dotview = () => ({
     backgroundColor:'rgba(84, 84, 84, 1)',
     borderRadius:10,
     alignSelf:'center',
-    // marginBottom:size.moderateScale(12),
-    // justifyContent: 'center',
-    //   alignItems: 'center',
-
 
   });
   export const reviewtxt = () => ({
-    // color:color.white,
     fontFamily: fonts.extrasmall,
     fontSize: fontSize.extrasmall,
-    // marginHorizontal:size.moderateScale(5),
-    // borderWidth:1,
     justifyContent: 'center',
     alignItems: 'center',
   });
@@ -125,15 +100,15 @@ export const dotview = () => ({
     flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
-    //   backgroundColor:"purple"
+    
   });
-  export const starview = () => ({
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
-  });
+  // export const starview = () => ({
+  //      justifyContent: 'center',
+  //    alignItems: 'center',
+  // });
   export const rightview = () => ({
     flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
-    //   backgroundColor:"red"
+  
   });
