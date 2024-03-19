@@ -3,7 +3,7 @@ import React from 'react';
 import SplashScreen from './app/screens/SplashScreen';
 import {color} from './app/theme';
 
-export default function App() {
+export default function Home() {
   return (
     <View style={{flex: 1, backgroundColor: color.white}}>
       <SplashScreen />
