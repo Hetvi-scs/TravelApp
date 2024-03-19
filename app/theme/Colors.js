@@ -16,6 +16,7 @@ export const lightTheme = {
   red: 'rgba(251, 27, 27, 1)',
   white: 'rgba(255, 255, 255, 1)',
   lightwhite: 'rgba(241,241,241,1)',
+  lightblue:'rgba(11, 146, 158, 1)'
 };
 
 export const darkTheme = {
