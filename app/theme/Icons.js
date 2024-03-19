@@ -81,9 +81,9 @@ import Bluelocation from './images/svg/Bluelocation';
 export const IcBeach = props=> <Beach {...props}/>;
 export const IcBiggraystar = props=><Biggraystar {...props}/>
 export const IcFood=props=><Food {...props}/>
-export const IcGrayaccount=props=><Grayaccount/>
+export const IcGrayaccount=props=><Grayaccount {...props}/>
 export const IcGrayCalendar=props=><GrayCalender {...props}/>
-export const IcWhitetower=props=><Whitetower/>
+export const IcWhitetower=props=><Whitetower {...props}/>
 export const IcSearch=props=> <Homesearch {...props}/>
 export const IcOrangeflight=props=><Orangeplane {...props}/>
 export const IcOrangehotel=props=><Orangehotel {...props}/>
