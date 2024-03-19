@@ -22,7 +22,7 @@ export default function CustomeHotel({
   img5,
   rtxt,
   price,
-  pernight,
+  
   count,
   location,
   distance,
@@ -134,6 +134,7 @@ export default function CustomeHotel({
           style={{
             flexDirection: 'row',
             marginHorizontal: size.moderateScale(5),
+          
           }}>
           <CustomReview2 type={type}></CustomReview2>
           <View
@@ -261,7 +262,7 @@ export default function CustomeHotel({
                 marginVertical: size.moderateScale(10),
                 marginHorizontal: size.moderateScale(5),
               }}>
-              <CustomButton type={'continue'} text={btntxt}></CustomButton>
+              <CustomButton type={'booknow'} text={btntxt}></CustomButton>
             </View>
             <View
               style={{
