@@ -76,12 +76,22 @@ export default function Home() {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
+        <View
+          style={{
+            position: 'absolute',
+            backgroundColor: 'black',
+            height: size.moderateScale(200),
+            width: size.deviceWidth,
+            opacity: 0.5,
+            zIndex: -1,
+          }}></View>
         <Image
           source={images.homepage}
           style={{
             position: 'absolute',
             width: size.deviceWidth,
             height: size.moderateScale(200),
+            zIndex: -2,
           }}
         />
         <View style={{width: size.deviceWidth}}>
