@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Createown() {
+export default function MyTrips() {
   return (
     <View>
-      <Text>Createown</Text>
+      <Text>MyTrips</Text>
     </View>
   )
 }
