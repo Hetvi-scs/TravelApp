@@ -1,16 +1,14 @@
 import {View, Text} from 'react-native';
 import React from 'react';
-import Upcomingcard from './app/components/Upcomingcard';
+import SplashScreen from './app/screens/SplashScreen';
+import {color} from './app/theme';
 import Customheader from './app/components/CustomHeader';
-import { IcBluePlane, IcGrayrightlong, IcLongGrayArrow, IcRightsideArrow, IcWhitetower } from './app/theme';
-import Rightwhitearrow from './app/theme/images/svg/Rightwhitearrow';
+import Upcomingcard from './app/components/Upcomingcard';
 
-export default function App() {
+export default function Home() {
   return (
     <View>
-      <Customheader type='second' img={<IcBluePlane/>} text='Select paymnt method'/>
-
-     
+     <Upcomingcard/>
     </View>
   );
 }
