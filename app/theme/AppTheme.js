@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // import {store} from 'redux-actions';
 import {darkTheme, lightTheme} from '.';
-export let color = darkTheme;
+export let color = lightTheme;
 
 export const getColors = (theme, colorScheme) => {
   color =
