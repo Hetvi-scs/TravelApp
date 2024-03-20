@@ -28,7 +28,7 @@ function MyTabBar({state}) {
   const navigation = useNavigation();
   return (
     <View style={{backgroundColor: color.white}}>
-      <View style={{marginTop: size.moderateScale(20)}}></View>
+      <View style={{marginTop: size.moderateScale(40)}}></View>
       {state.index == 0 ? (
         <CustomeTabBar
           onpress1={() => {
