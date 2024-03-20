@@ -3,13 +3,16 @@ import {color, fontSize, fonts, size} from '../../theme';
 export const mainview = () => ({
   flexDirection: 'row',
   marginTop: size.moderateScale(20),
-  marginHorizontal: size.moderateScale(25),
+ marginHorizontal: size.moderateScale(25),
   justifyContent: 'space-between',
+  //backgroundColor:'yellow',
+ // justifyContent:'center'
 });
 
 export const text = () => ({
   fontFamily: fonts.PoppinsBold,
   fontSize: fontSize.large,
+  
 });
 
 export const text1touch = () => ({
@@ -103,6 +106,6 @@ export const thirdtxtview = () => ({
 export const thirdtxt = () => ({
   fontFamily: fonts.PoppinsSemiBold,
   fontSize: fontSize.large,
-  color: color.orange,
+  color: color.extralightblack,
   textAlign: 'center',
 });
