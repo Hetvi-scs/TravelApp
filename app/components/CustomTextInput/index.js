@@ -15,6 +15,7 @@ export default function CustomTextInput({
   border,
   center,
   secure,
+  style,
 }) {
   return (
     <View style={styles.view()}>
@@ -27,6 +28,7 @@ export default function CustomTextInput({
           onChangeText={OnChangeText}
           textAlign={center}
           secureTextEntry={secure}
+          {...style}
         />
       ) : type == 'second' ? (
         <View style={styles.mainview()}>
@@ -39,6 +41,7 @@ export default function CustomTextInput({
             onChangeText={OnChangeText}
             textAlign={center}
             secureTextEntry={secure}
+            {...style}
           />
         </View>
       ) : (
@@ -53,6 +56,7 @@ export default function CustomTextInput({
             onChangeText={OnChangeText}
             textAlign={center}
             secureTextEntry={secure}
+            {...style}
           />
           <TouchableOpacity style={styles.View3()}>
             <View>{imgr}</View>
