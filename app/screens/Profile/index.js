@@ -41,7 +41,7 @@ export default function Profile() {
   ];
  
   return (
-    <View style={{}}>
+    <View style={{marginTop:size.moderateScale(40)}}>
       <View>
         <Text
           style={styles.profiletxt()}>

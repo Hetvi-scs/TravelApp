@@ -1,4 +1,4 @@
-import {size} from '../../theme';
+import {color, fontSize, fonts, size} from '../../theme';
 
 export const imgview = () => ({
   flexDirection: 'row',
@@ -12,9 +12,9 @@ export const txtview = () => ({
 });
 
 export const txt = () => ({
-  fontFamily: 'Poppins-Medium',
-  fontSize: 14,
-  color: '#888',
+  fontFamily:fonts.PoppinsMedium,
+  fontSize: fontSize.extrasmall,
+  color:color.lightgray,
 });
 
 export const flatlistview = () => ({
@@ -23,7 +23,7 @@ export const flatlistview = () => ({
 
 export const flatline = () => ({
   height: 1,
-  backgroundColor: '#ddd',
+  backgroundColor:color.semigray,
   width: '89%',
-  marginHorizontal: 20,
+  marginHorizontal: size.moderateScale(20),
 });
