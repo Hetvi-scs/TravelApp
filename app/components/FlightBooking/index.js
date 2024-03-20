@@ -1,7 +1,7 @@
 import { View, Text,Image } from 'react-native'
 import React from 'react'
 import * as style from './style'
-import { IcLock, images } from '../../theme'
+import { IcLock, color, images } from '../../theme'
 
 
 export default function FlightBooking({
@@ -14,8 +14,8 @@ export default function FlightBooking({
     timetxt2,
     place2,
     price,
-    place3,
-    locktext
+    clr
+   
 }) {
   return (
 <View>
@@ -36,7 +36,7 @@ export default function FlightBooking({
 
     <View style={style.greenlinetxt()}>
       <Text style={style.timetxt()}>{timetxt}</Text>
-      <View style={style.rectangle()}></View>
+      <View style={style.rectangle(clr)}></View>
       <View style={style.round()}></View>
       <Text style={style.txt()}>{type}</Text>
     </View>
@@ -48,7 +48,7 @@ export default function FlightBooking({
 
     <View style={style.thirdview()}>
         <Text style={style.thirdtime()}>${price}</Text>
-        <Text style={style.thirdtxt()}>{place3}</Text>
+        <Text style={style.thirdtxt()}>Per traveller</Text>
     </View>
   </View>
 
@@ -57,7 +57,7 @@ export default function FlightBooking({
         <IcLock/>
     </View>
     <View>
-        <Text style={style.lasttxt()}>{locktext}</Text>
+        <Text style={style.lasttxt()}>Lock this price</Text>
     </View>
 </View>
 
