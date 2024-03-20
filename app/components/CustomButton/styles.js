@@ -50,7 +50,7 @@ export const downtxt = () => ({
 export const sort = () => ({
   borderWidth: 1.2,
   borderColor: color.rama,
-  height: size.moderateScale(42),
+  height: size.moderateScale(35),
   borderRadius: size.moderateScale(8),
   justifyContent: 'center',
   alignItems: 'center',
@@ -58,7 +58,7 @@ export const sort = () => ({
 export const sorttxt = () => ({
   color: color.semiblack,
   fontFamily: fonts.PoppinsSemiBold,
-  fontSize: fontSize.large,
+  fontSize: fontSize.medium,
 });
 
 export const male = () => ({
