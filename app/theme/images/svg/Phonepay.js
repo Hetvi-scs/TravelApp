@@ -3,8 +3,8 @@ import Svg, { Path } from "react-native-svg"
 const Phonepay = (props) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={30}
-    height={30}
+    width={13}
+    height={20}
     fill="none"
     {...props}
   >

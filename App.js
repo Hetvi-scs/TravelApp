@@ -1,18 +1,10 @@
-import {View, Text} from 'react-native';
-import React from 'react';
-import SplashScreen from './app/screens/SplashScreen';
-import {IcBank, color} from './app/theme';
-import Customheader from './app/components/CustomHeader';
-import Upcomingcard from './app/components/Upcomingcard';
-import Profile from './app/screens/Profile';
+import { View, Text } from 'react-native'
+import React from 'react'
 
-import {NavigationContainer} from '@react-navigation/native';
-import Bottomtab from './app/navigation/bottomTabNavigation';
-
-export default function Home() {
+export default function App() {
   return (
-    <NavigationContainer>
-      <Bottomtab />
-    </NavigationContainer>
-  );
+    <View>
+      <Text>App</Text>
+    </View>
+  )
 }
