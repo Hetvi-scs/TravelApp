@@ -1,17 +1,14 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import FlightDetails from '../../components/FlightDetailscard'
-import Upcomingcard from '../../components/Upcomingcard'
+import {View, Text} from 'react-native';
+import React from 'react';
+import {IcSmallcheck, color, size} from '../../theme';
+import CustomeTabBar from '../../components/CustomTabbar';
 
 export default function MyTrips() {
   return (
-    <View style={{backgroundColor:'pink', flex:1,}}>
+    <View style={{backgroundColor:'pink', flex:1, marginTop:size.moderateScale(40)}}>
+      <CustomeTabBar type='three'/>
       
-      <View style={{justifyContent:'space-between', flexDirection:'column' }}>
-      <Upcomingcard/>
-      <Upcomingcard/>
-      <Upcomingcard/>
-      </View>
+      <Text>MyTrips</Text>
     </View>
-  )
+  );
 }
