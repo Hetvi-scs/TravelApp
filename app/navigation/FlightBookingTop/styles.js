@@ -2,7 +2,7 @@ import {color, fontSize, fonts, size} from '../../theme';
 
 export const mainView = () => ({backgroundColor: color.white});
 
-export const view1 = () => ({marginTop: size.moderateScale(20)});
+export const view1 = () => ({marginTop: size.moderateScale(14)});
 
 export const view2 = () => ({
   height: size.moderateScale(50),
