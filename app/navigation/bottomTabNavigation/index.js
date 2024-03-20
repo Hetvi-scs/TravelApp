@@ -17,6 +17,7 @@ import {
   IcOrangemulticity,
   IcOrangesuitcase,
   color,
+  size,
 } from '../../theme';
 import Profile from '../../screens/Profile';
 
@@ -27,7 +28,7 @@ export default function Bottomtab() {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: color.orange,
-        tabBarStyle: {height: 60},
+        tabBarStyle: {height:size.moderateScale (60)},
       }}>
       <Tab.Screen
         name="Home"

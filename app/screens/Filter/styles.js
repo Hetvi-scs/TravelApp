@@ -35,6 +35,6 @@ export const maincheckboxview2 = () => ({
   
     alignItems: 'center',
   });
-export const label = () => ({
+export const labels = () => ({
   fontSize: fontSize.small,
 });
