@@ -23,36 +23,49 @@ const list = [
 
 export default function SelectPaymentMode() {
   return (
-<View>
+<View style={style.main()}>
     <Customheader
         type='second'
         img={<IcHeaderBackArrow/>}
         text='Select payment mode'
     />  
+    <View style={{flex:1}}> 
 
-<View>
-    <View style={style.container()}>
+
+
+         <View> 
+      <View style={style.container()}>
 
           <View ><DueComponent/></View>
       <View style={style.paymain()}>
          <Text style={style.payopt()}>Payment options</Text>
         <View>
-            <Flatlistcompo
+             <Flatlistcompo
              data={list}
             />
         </View>
       </View>
 
-      <View style={{marginHorizontal:size.moderateScale(0)}}>
-        <Text style={style.uppertxt()}>
+      <View style={{height:size.moderateScale(72),}}>
+        <Text style={style.blueone()}>
         By proceeding, I understand and agree with the{' '}
-        <Text style={style.blueone()}>privacy policy</Text>
-        <Text>,</Text>
-        
+        <Text style={style.blueone(color.darkblue)}>privacy policy,</Text>
+
+       <TouchableOpacity style={{height:13,justifyContent:'flex-start'}}>
+ 
+       </TouchableOpacity> 
+
+        {/* <Text>,</Text> */}
          the{' '}
-         <Text style={style.blueone()}>user agreement</Text>
+        <TouchableOpacity style={{height:13,justifyContent:'flex-start'}}>
+        <Text style={style.blueone(color.darkblue)}>user agreement</Text>
+        </TouchableOpacity> 
+
          <Text>{' '}and {' '}</Text>
-         <Text style={style.blueone()}>terms of service </Text>
+
+         <TouchableOpacity style={{height:13,justifyContent:'flex-start'}}>
+         <Text style={style.blueone(color.darkblue)}>terms of service </Text>
+         </TouchableOpacity>
          <Text>of Tripify.</Text>
          </Text>
 
@@ -60,6 +73,14 @@ export default function SelectPaymentMode() {
 
     </View>
 </View>   
-</View>
+
+
+
+
+
+    </View>
+
+    </View>
+
   )
 }

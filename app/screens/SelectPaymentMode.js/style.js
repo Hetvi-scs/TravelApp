@@ -1,5 +1,11 @@
 import {color, fontSize, fonts, size} from '../../theme';
 
+export const main = () => ({
+  // backgroundColor:'rgb(184, 241, 205)',
+  flex:1
+});
+
+
 export const container = () => ({
   backgroundColor: color.white,
   height: size.moderateScale(45),
@@ -35,21 +41,16 @@ export const container = () => ({
     marginHorizontal:size.moderateScale(12),
   });
 
-  export const uppertxt = () => ({
-    color: color.black,
-    fontFamily: fonts.PoppinsMedium,
-    fontSize: size.moderateScale(9.8),
+  export const blueone = (clr) => ({
+    color: clr ? clr :color.black  ,
+    fontFamily: fonts.PoppinsRegular,
+    fontSize: size.moderateScale(10),
+
     // fontSize:fontSize.extrasmall,
     // borderWidth: 1,
-    // marginVertical: size.moderateScale(2),
+  
   });
-  export const blueone = () => ({
-    color: color.darkblue,
-    // fontFamily: fonts.PoppinsMedium,
-    // fontSize: size.moderateScale(10),
-    // // borderWidth: 1,
-    // marginVertical: size.moderateScale(2),
-  });
+
 
 
 
