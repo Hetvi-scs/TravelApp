@@ -11,6 +11,10 @@ import {
   fontSize,
   fonts,
   size,
+} from '../../theme';
+import Sharegray from '../../theme/images/svg/Sharegray';
+
+export default function Upcomingcard({
   date1,
   to,
   date2,
@@ -18,25 +22,29 @@ import {
   city1,
   city2,
   vikram,
-  days
-} from '../../theme';
-import Sharegray from '../../theme/images/svg/Sharegray';
-
-export default function Upcomingcard() {
+  days,
+  showGrayArrow = true,
+}) {
   return (
     <View
       style={{
-     //   backgroundColor: 'pink',
-        marginHorizontal: size.moderateScale(25),
-        borderWidth: 0.7,
+        //   backgroundColor: 'pink',
+        marginHorizontal: size.moderateScale(13),
+        borderWidth: size.moderateScale(0.7),
         borderColor: color.lightgray,
-        borderRadius:7
+        borderRadius: size.moderateScale(7),
+        marginVertical: size.moderateScale(12),
       }}>
       <View>
-        <View style={{flexDirection: 'row', justifyContent: 'flex-start', marginTop:10}}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'flex-start',
+            marginTop: 10,
+          }}>
           <Text
             style={{
-              marginLeft: 20,
+              marginLeft: size.moderateScale(20),
               fontFamily: fonts.PoppinsSemiBold,
               color: color.black,
               fontSize: fontSize.extrasmall,
@@ -76,32 +84,47 @@ export default function Upcomingcard() {
           style={{
             backgroundColor: color.lightgray,
             height: 0.4,
-            
+
             marginBottom: 15,
           }}></View>
         <View style={{flexDirection: 'row'}}>
-          <IcGraymulticity style={{marginLeft: size.moderateScale(18)}} />
+          <View style={{}}>
+            <IcGraymulticity style={{marginLeft: size.moderateScale(18)}} />
+          </View>
+          <View style={{}}>
+            <Text
+              style={{
+                marginHorizontal: size.moderateScale(8),
+                fontFamily: fonts.PoppinsMedium,
+                color: color.black,
+                fontSize: fontSize.extrasmall,
+              }}>
+              {city1}
+            </Text>
+          </View>
 
-          <Text
-            style={{
-              marginHorizontal: size.moderateScale(8),
-              fontFamily: fonts.PoppinsMedium,
-              color: color.black,
-              fontSize: fontSize.extrasmall,
-            }}>
-            {city1}
-          </Text>
-          <IcGrayrightlong style={{marginTop: size.moderateScale(1.5)}} />
-          <Text
-            style={{
-              marginHorizontal: size.moderateScale(8),
-              fontFamily: fonts.PoppinsMedium,
-              color: color.black,
-              fontSize: fontSize.extrasmall,
-            }}>
-            {city2}
-          </Text>
-          <View style={{marginHorizontal: size.moderateScale(110)}}>
+        
+
+          {showGrayArrow && (
+            <View style={{}}>
+              <IcGrayrightlong style={{marginTop: size.moderateScale(1.5)}} />
+            </View>
+          )}
+
+         
+
+          <View style={{flex:1}}>
+            <Text
+              style={{
+                marginHorizontal: size.moderateScale(8),
+                fontFamily: fonts.PoppinsMedium,
+                color: color.black,
+                fontSize: fontSize.extrasmall,
+              }}>
+              {city2}
+            </Text>
+          </View>
+          <View style={{marginHorizontal:size.moderateScale(13)}}>
             <Text
               style={{
                 fontFamily: fonts.PoppinsRegular,
@@ -118,35 +141,34 @@ export default function Upcomingcard() {
             flexDirection: 'row',
             justifyContent: 'space-between',
             marginHorizontal: 8,
-            alignItems:'center',
-           // backgroundColor:'red'
+            alignItems: 'center',
+            // backgroundColor:'red'
           }}>
-            <View>
-          <Text
-            style={{
-              marginHorizontal: size.moderateScale(42),
-              fontFamily: fonts.PoppinsRegular,
-              fontSize: fontSize.extrasmall,
-              color: color.lightgray,
-            }}>
-           {vikram}
-          </Text>
-          <Text
-          style={{
-            marginHorizontal: size.moderateScale(35),
-            fontFamily: fonts.PoppinsRegular,
-            fontSize: fontSize.extrasmall,
-            color: color.lightgray,
-            marginBottom:10
-          }}>
-          {' '}
-         {days}
-        </Text></View>
-          
-            <Sharegray />
-          
+          <View>
+            <Text
+              style={{
+                marginHorizontal: size.moderateScale(42),
+                fontFamily: fonts.PoppinsRegular,
+                fontSize: fontSize.extrasmall,
+                color: color.lightgray,
+              }}>
+              {vikram}
+            </Text>
+            <Text
+              style={{
+                marginHorizontal: size.moderateScale(39),
+                fontFamily: fonts.PoppinsRegular,
+                fontSize: fontSize.extrasmall,
+                color: color.lightgray,
+                marginBottom: 10,
+              }}>
+              {' '}
+              {days}
+            </Text>
+          </View>
+
+          <Sharegray />
         </View>
-        
       </View>
     </View>
   );
