@@ -3,6 +3,7 @@ import React from 'react';
 import {color, fontSize, fonts, size} from '../../theme';
 import CreateOwn from '../../components/CreateOwn';
 import * as styles from './styles';
+import CustomButton from '../../components/CustomButton';
 
 export default function CreateYourOwn() {
   const arr = [
@@ -21,14 +22,6 @@ export default function CreateYourOwn() {
       arrive: 'Goa, India',
       depart: 'Mumbai, India',
       date: '16 jun 2023',
-    },
-    {
-      label: 'Flight 3',
-      sarrive: 'DEL',
-      sdepart: 'GOI',
-      arrive: 'New Delhi, India',
-      depart: 'Goa, India',
-      date: '9 jun 2023',
     },
   ];
 
@@ -55,6 +48,13 @@ export default function CreateYourOwn() {
           />
         ))}
       </ScrollView>
+      <View
+        style={{
+          height: size.moderateScale(50),
+          marginHorizontal: size.moderateScale(25),
+        }}>
+        <CustomButton type={'black'} text={'+Add Flight'} />
+      </View>
     </View>
   );
 }
