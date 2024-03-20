@@ -22,18 +22,28 @@ export default function Customheader({
 }) {
   if (type == 'first') {
     return (
-      <View style={{}}>
+      <View style={{
+        // backgroundColor:'blue', 
+        marginHorizontal:25, marginTop:20}}>
         <View style={styles.mainview()}>
           <TouchableOpacity
             onPress={onPress}
-            style={{marginTop: size.moderateScale(7),}}>
+            style={{
+              // backgroundColor:'yellow',
+              justifyContent: 'center',  alignItems: 'center',width:size.moderateScale(40)}}>
             <View>{img}</View>
           </TouchableOpacity>
           <View
             style={{
-              justifyContent: 'center',
-              backgroundColor: 'red',
-              alignSelf: 'center',
+              // justifyContent: 'center',
+              // alignSelf: 'center',
+             // marginRight:20
+            //  height: size.moderateScale(50),
+            // width: size.moderateScale(200),
+             alignItems: 'center',
+            // backgroundColor:'red',
+             flex:1,
+            justifyContent: 'center',
             }}>
             <Text style={styles.text()}>{text}</Text>
           </View>
@@ -75,7 +85,7 @@ export default function Customheader({
         </View>
       </View>
     );
-  } else if (type == 'third') {
+  }  if (type == 'third') {
     return (
       <View style={styles.thirdmainview()}>
         <View style={styles.thirdsecondview()}>
@@ -88,5 +98,11 @@ export default function Customheader({
         </View>
       </View>
     );
+  }
+
+  else if(type=='fourth') {
+    return(
+      <View></View>
+    )
   }
 }
