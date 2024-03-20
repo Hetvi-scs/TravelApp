@@ -25,15 +25,13 @@ export default function SelectPaymentMode() {
   return (
 <View style={style.main()}>
     <Customheader
-        type='second'
+        type='first'
         img={<IcHeaderBackArrow/>}
         text='Select payment mode'
     />  
     <View style={{flex:1}}> 
 
-
-
-         <View> 
+     <View> 
       <View style={style.container()}>
 
           <View ><DueComponent/></View>

@@ -49,8 +49,8 @@ export const txt2 = () => ({
   color: color.black,
   marginHorizontal: size.moderateScale(12),
 });
-export const rectangle = () => ({
-  backgroundColor: color.parrotgreen,
+export const rectangle = (clr) => ({
+  backgroundColor: clr ? clr :color.parrotgreen,
   width: 80,
   height: 2,
 
