@@ -3,8 +3,8 @@ import React from 'react';
 
 export default function Goa() {
   return (
-    <View>
-      <Text>Goa</Text>
+    <View style={{flex: 1, backgroundColor: 'white'}}>
+      <Text>goa</Text>
     </View>
   );
 }

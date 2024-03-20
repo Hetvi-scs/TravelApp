@@ -18,32 +18,38 @@ export default function Customheader({
   text3,
   img,
   onPress,
-  onPressl
+  onPressl,
 }) {
   if (type == 'first') {
     return (
-      <View style={{
-        // backgroundColor:'blue', 
-        marginHorizontal:25, marginTop:20}}>
+      <View
+        style={{
+          // backgroundColor:'blue',
+          marginHorizontal: 25,
+          marginTop: 20,
+        }}>
         <View style={styles.mainview()}>
           <TouchableOpacity
             onPress={onPress}
             style={{
               // backgroundColor:'yellow',
-              justifyContent: 'center',  alignItems: 'center',width:size.moderateScale(40)}}>
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: size.moderateScale(40),
+            }}>
             <View>{img}</View>
           </TouchableOpacity>
           <View
             style={{
               // justifyContent: 'center',
               // alignSelf: 'center',
-             // marginRight:20
-            //  height: size.moderateScale(50),
-            // width: size.moderateScale(200),
-             alignItems: 'center',
-            // backgroundColor:'red',
-             flex:1,
-            justifyContent: 'center',
+              // marginRight:20
+              //  height: size.moderateScale(50),
+              // width: size.moderateScale(200),
+              alignItems: 'center',
+              // backgroundColor:'red',
+              flex: 1,
+              justifyContent: 'center',
             }}>
             <Text style={styles.text()}>{text}</Text>
           </View>
@@ -85,7 +91,8 @@ export default function Customheader({
         </View>
       </View>
     );
-  }  if (type == 'third') {
+  }
+  if (type == 'third') {
     return (
       <View style={styles.thirdmainview()}>
         <View style={styles.thirdsecondview()}>
@@ -98,11 +105,7 @@ export default function Customheader({
         </View>
       </View>
     );
-  }
-
-  else if(type=='fourth') {
-    return(
-      <View></View>
-    )
+  } else if (type == 'fourth') {
+    return <View></View>;
   }
 }
