@@ -19,16 +19,19 @@ import {
   color,
 } from '../../theme';
 import Profile from '../../screens/Profile';
+import Multi from '../MulticityNavigation';
 
 export default function Bottomtab() {
   const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
+      safeAreaInsets={'top'}
       screenOptions={{headerShown: false, tabBarActiveTintColor: color.orange}}>
       <Tab.Screen
         name="Home"
         component={Home}
         options={{
+          tabBarLabelStyle: {paddingBottom: 10},
           tabBarIcon: ({focused}) => {
             return <View>{focused ? <IcOrangehome /> : <IcGrayhome />}</View>;
           },
@@ -38,7 +41,7 @@ export default function Bottomtab() {
         name="Notification"
         component={Notification}
         options={{
-            tabBarLabel: 'Notifications',
+          tabBarLabel: 'Notifications',
           tabBarIcon: ({focused}) => {
             return (
               <View>
@@ -52,6 +55,7 @@ export default function Bottomtab() {
         name="My Trips"
         component={MyTrips}
         options={{
+          tabBarLabelStyle: {paddingBottom: 10},
           tabBarLabel: 'My Trips',
           tabBarIcon: ({focused}) => {
             return (
@@ -61,10 +65,10 @@ export default function Bottomtab() {
         }}
       />
       <Tab.Screen
-        name="MultiCity"
-        component={MultiCity}
+        name="Multi"
+        component={Multi}
         options={{
-            tabBarLabel: 'Multi-city',
+          tabBarLabel: 'Multi-city',
           tabBarIcon: ({focused}) => {
             return (
               <View>
@@ -78,24 +82,10 @@ export default function Bottomtab() {
         name="Account"
         component={Profile}
         options={{
-            tabBarLabel: 'Account',
+          tabBarLabel: 'Account',
           tabBarIcon: ({focused}) => {
             return (
-              <View>
-                {focused ? (
-                  <IcOrangeaccount
-                  //   style={{
-                  //     height: 50,
-                  //     width: 100,
-                  //     backgroundColor: 'purple',
-                  //   }}
-                  />
-                ) : (
-                  <IcGrayaccount
-                  //   style={{height: 50, width: 50, backgroundColor: 'gray'}}
-                  />
-                )}
-              </View>
+              <View>{focused ? <IcOrangeaccount /> : <IcGrayaccount />}</View>
             );
           },
         }}

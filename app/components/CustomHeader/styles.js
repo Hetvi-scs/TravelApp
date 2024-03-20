@@ -2,34 +2,45 @@ import {color, fontSize, fonts, size} from '../../theme';
 
 export const mainview = () => ({
   flexDirection: 'row',
-  marginTop: size.moderateScale(20),
-  marginHorizontal: size.moderateScale(25),
-  justifyContent: 'space-between',
+// marginTop: size.moderateScale(20),
+//  marginHorizontal: size.moderateScale(25),
+  //justifyContent: 'space-between',
+  //backgroundColor:'yellow',
+ // justifyContent:'center'
 });
 
 export const text = () => ({
-  fontFamily: fonts.PoppinsBold,
+  fontFamily: fonts.PoppinsSemiBold,
   fontSize: fontSize.large,
+//  backgroundColor:'yellow'
+color:color.semiblack
 });
 
 export const text1touch = () => ({
-  marginTop: size.moderateScale(3),
+  //marginTop: size.moderateScale(3),
+ //ht backgroundColor:'green',
+  height:size.moderateScale(40),
+  width:size.moderateScale(40),
+  justifyContent: 'center',  
+  alignItems: 'center',
+ // marginRight:size.moderateScale(10)
 });
 
 export const text1 = () => ({
   color: color.orange,
-  fontFamily: fonts.PoppinsBoldtailc,
+  fontFamily: fonts.PoppinsSemiBold,
+ // marginRight:size.moderateScale(10)
 });
 
 export const lineview = () => ({
-  marginTop: size.moderateScale(10),
-  marginHorizontal: size.moderateScale(25),
+ marginTop: size.moderateScale(5),
+ //marginHorizontal: size.moderateScale(25),
 });
 
 export const line = () => ({
   backgroundColor: color.lightgray,
   // width: size.moderateScale(358),
-  height: size.moderateScale(1),
+  height: size.moderateScale(0.5),
 });
 
 export const secondmainview = () => ({
@@ -103,6 +114,6 @@ export const thirdtxtview = () => ({
 export const thirdtxt = () => ({
   fontFamily: fonts.PoppinsSemiBold,
   fontSize: fontSize.large,
-  color: color.orange,
+  color: color.extralightblack,
   textAlign: 'center',
 });

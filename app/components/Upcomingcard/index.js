@@ -28,10 +28,10 @@ export default function Upcomingcard({
   return (
     <View
       style={{
-        //   backgroundColor: 'pink',
+        //  backgroundColor: 'pink',
         marginHorizontal: size.moderateScale(13),
-        borderWidth: size.moderateScale(0.7),
-        borderColor: color.lightgray,
+        borderWidth: size.moderateScale(0.9),
+        borderColor: color.semigray,
         borderRadius: size.moderateScale(7),
         marginVertical: size.moderateScale(12),
       }}>
@@ -40,41 +40,41 @@ export default function Upcomingcard({
           style={{
             flexDirection: 'row',
             justifyContent: 'flex-start',
-            marginTop: 10,
+            marginTop: size.moderateScale(10),
           }}>
           <Text
             style={{
               marginLeft: size.moderateScale(20),
               fontFamily: fonts.PoppinsSemiBold,
-              color: color.black,
+              color: color.semiblack,
               fontSize: fontSize.extrasmall,
             }}>
             {date1}
           </Text>
           <Text
             style={{
-              marginHorizontal: size.moderateScale(7),
+              marginHorizontal: size.moderateScale(3),
               fontFamily: fonts.PoppinsSemiBold,
-              color: color.black,
+              color: color.semiblack,
               fontSize: fontSize.extrasmall,
             }}>
             {to}
           </Text>
           <Text
             style={{
-              marginHorizontal: size.moderateScale(7),
+              marginHorizontal: size.moderateScale(0),
               fontFamily: fonts.PoppinsSemiBold,
-              color: color.black,
+              color: color.semiblack,
               fontSize: fontSize.extrasmall,
             }}>
             {date2}
           </Text>
           <Text
             style={{
-              marginHorizontal: size.moderateScale(6),
-              marginHorizontal: size.moderateScale(7),
+              marginHorizontal: size.moderateScale(4),
+              // marginHorizontal: size.moderateScale(7),
               fontFamily: fonts.PoppinsSemiBold,
-              color: color.black,
+              color: color.semiblack,
               fontSize: fontSize.extrasmall,
             }}>
             {month}
@@ -82,10 +82,11 @@ export default function Upcomingcard({
         </View>
         <View
           style={{
-            backgroundColor: color.lightgray,
-            height: 0.4,
+            backgroundColor: color.semigray,
+            // height: 0.4,
+            borderWidth: 0.14,
 
-            marginBottom: 15,
+            marginBottom: size.moderateScale(15),
           }}></View>
         <View style={{flexDirection: 'row'}}>
           <View style={{}}>
@@ -103,17 +104,13 @@ export default function Upcomingcard({
             </Text>
           </View>
 
-        
-
           {showGrayArrow && (
             <View style={{}}>
               <IcGrayrightlong style={{marginTop: size.moderateScale(1.5)}} />
             </View>
           )}
 
-         
-
-          <View style={{flex:1}}>
+          <View style={{flex: 1}}>
             <Text
               style={{
                 marginHorizontal: size.moderateScale(8),
@@ -124,7 +121,7 @@ export default function Upcomingcard({
               {city2}
             </Text>
           </View>
-          <View style={{marginHorizontal:size.moderateScale(13)}}>
+          <View style={{marginHorizontal: size.moderateScale(13)}}>
             <Text
               style={{
                 fontFamily: fonts.PoppinsRegular,
@@ -140,7 +137,7 @@ export default function Upcomingcard({
           style={{
             flexDirection: 'row',
             justifyContent: 'space-between',
-            marginHorizontal: 8,
+            marginHorizontal: size.moderateScale(8),
             alignItems: 'center',
             // backgroundColor:'red'
           }}>
@@ -160,7 +157,7 @@ export default function Upcomingcard({
                 fontFamily: fonts.PoppinsRegular,
                 fontSize: fontSize.extrasmall,
                 color: color.lightgray,
-                marginBottom: 10,
+                marginBottom: size.moderateScale(10),
               }}>
               {' '}
               {days}
