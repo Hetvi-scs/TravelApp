@@ -38,10 +38,27 @@ export const container = () => ({
   export const uppertxt = () => ({
     color: color.black,
     fontFamily: fonts.PoppinsMedium,
-    fontSize: size.moderateScale(10),
+    fontSize: size.moderateScale(9.8),
+    // fontSize:fontSize.extrasmall,
     // borderWidth: 1,
-    marginVertical: size.moderateScale(2),
+    // marginVertical: size.moderateScale(2),
   });
+  export const blueone = () => ({
+    color: color.darkblue,
+    // fontFamily: fonts.PoppinsMedium,
+    // fontSize: size.moderateScale(10),
+    // // borderWidth: 1,
+    // marginVertical: size.moderateScale(2),
+  });
+
+
+
+
+
+
+
+
+
   // export const uppertxt = () => ({
   //   color: color.black,
   //   fontFamily: fonts.PoppinsMedium,
