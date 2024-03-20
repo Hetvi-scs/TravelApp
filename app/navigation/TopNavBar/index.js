@@ -12,7 +12,6 @@ export default function TopNavBar() {
 
   return (
     <Tab.Navigator
-      initialRouteName="JoinPhone"
       screenOptions={{
         headerShown: false,
         swipeEnabled: false,
@@ -35,6 +34,8 @@ function MyTabBar({state}) {
           onpress1={() => {
             navigation.navigate('PopularDestination');
           }}
+          text1={'Popular Destination'}
+          text2={'Create your own'}
           onpress2={() => {
             navigation.navigate('CreateYourOwn');
           }}
@@ -45,6 +46,8 @@ function MyTabBar({state}) {
           onpress1={() => {
             navigation.navigate('PopularDestination');
           }}
+          text1={'Popular Destination'}
+          text2={'Create your own'}
           onpress2={() => {
             navigation.navigate('CreateYourOwn');
           }}

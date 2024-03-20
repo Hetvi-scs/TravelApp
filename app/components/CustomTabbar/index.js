@@ -4,7 +4,14 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import {color, fontSize, fonts, size} from '../../theme';
 
 const Tab = createMaterialTopTabNavigator();
-export default function CustomeTabBar({type, border, onpress1, onpress2}) {
+export default function CustomeTabBar({
+  type,
+  border,
+  onpress1,
+  onpress2,
+  text1,
+  text2,
+}) {
   if (type == 'three') {
     return (
       <View>
@@ -125,7 +132,7 @@ export default function CustomeTabBar({type, border, onpress1, onpress2}) {
                   fontFamily: fonts.PoppinsRegular,
                   color: color.lightblack,
                 }}>
-                Popular Destination
+                {text1}
               </Text>
             </View>
           </TouchableOpacity>
@@ -148,7 +155,7 @@ export default function CustomeTabBar({type, border, onpress1, onpress2}) {
                   fontFamily: fonts.PoppinsRegular,
                   color: color.lightblack,
                 }}>
-                Create your own
+                {text2}
               </Text>
             </View>
           </TouchableOpacity>
