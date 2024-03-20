@@ -5,11 +5,14 @@ import {IcBank, color} from './app/theme';
 import Customheader from './app/components/CustomHeader';
 import Upcomingcard from './app/components/Upcomingcard';
 import Profile from './app/screens/Profile';
+import {color} from './app/theme';
+import {NavigationContainer} from '@react-navigation/native';
+import Bottomtab from './app/navigation/bottomTabNavigation';
 
 export default function Home() {
   return (
-    <View>
-    <Profile/>
-    </View>
+    <NavigationContainer>
+      <Bottomtab />
+    </NavigationContainer>
   );
 }

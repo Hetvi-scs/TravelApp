@@ -11,6 +11,7 @@ export const input = border => ({
 });
 export const input2 = border => ({
   flex: 1,
+  height: size.moderateScale(50),
   paddingLeft: size.moderateScale(35),
   borderColor: border ? border : color.gray,
   borderRadius: size.moderateScale(6),
