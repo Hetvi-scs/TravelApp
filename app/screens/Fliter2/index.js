@@ -7,7 +7,7 @@ import {
   } from 'react-native';
   import React, {useState} from 'react';
   
-  import {IcCheckRight, IcGraycross, color, fonts, size} from '../../theme';
+  import {IcBlackstar, IcCheckRight, IcGraycross, color, fonts, size} from '../../theme';
   import Customheader from '../../components/CustomHeader';
   import MultiSlider from '@ptomasroos/react-native-multi-slider';
   import * as style from './styles';
@@ -24,29 +24,31 @@ import {
       setChecked(co => co.concat(data));
     };
     const items = [
-      {label: 'Non Stop'},
-      {label: '1 Stop'},
-      {label: 'More than 1'},
+      {label: 'Students'},
+      {label: 'Families'},
+      {label: "Business Traveler's"},
     ];
     const items2 = [
-      {label: 'Before 6AM'},
-      {label: '6AM - 12 Noon'},
-      {label: '12 Noon - 6PM'},
-      {label: 'After 6PM'},
+      {label: 'Sightseeing'},
+      {label: 'Food'},
+      {label: 'Adventure'},
+      {label: 'Shopping'},
+      {label: 'Cultural Experiences'}, 
+      {label: 'Nature and Wildlife'},
+      
     ];
+    
     const items3 = [
-      {label: 'Before 6AM'},
-      {label: '6AM - 12 Noon'},
-      {label: '12 Noon - 6PM'},
-      {label: 'After 6PM'},
+      {label: 'Historic'},
+      {label: 'Modern'},
+      {label: 'Royal'},
+      {label: 'Heritage'},
+      {label: 'Palace'},
+
     ];
     const items1 = [
-      {label: 'Air India'},
-      {label: 'Air Asia'},
-      {label: 'IndiGo'},
-      {label: 'GoAir'},
-      {label: 'Spicejet'},
-      {label: 'Vistara'},
+      {label: '4★& above'},
+      {label: '3★& above'},
     ];
     const handleClear = () => {
       setChecked([]);
@@ -72,16 +74,16 @@ import {
                 marginVertical: size.moderateScale(15),
               }}>
               <Text style={{color: color.black, fontFamily: fonts.PoppinsBold}}>
-                Stops
+              Travelers types
               </Text>
             </View>
   
             {items.map((item, index) => (
               <View key={index} style={style.maincheckboxview()}>
-                <View style={{width: size.moderateScale(100)}}>
+                <View style={{width: size.moderateScale(150)}}>
                   <Text style={style.labels()}>{item.label}</Text>
                 </View>
-                <View style={{marginHorizontal: 210}}>
+                <View style={{marginHorizontal: 155}}>
                   {checked.includes(item?.label) ? (
                     <TouchableOpacity onPress={() => check(item.label)}>
                       <View
@@ -133,7 +135,7 @@ import {
                 flexDirection: 'column',
               }}>
               <Text style={{color: color.black, fontFamily: fonts.PoppinsBold}}>
-                Airlines
+              Ratings
               </Text>
             </View>
             {items1.map((item, index) => (
@@ -223,19 +225,15 @@ import {
                 marginVertical: size.moderateScale(15),
               }}>
               <Text style={{color: color.black, fontFamily: fonts.PoppinsBold}}>
-                Departure Slot
+              Activities and Interests
               </Text>
-              <View style={{marginVertical: size.moderateScale(20)}}>
-                <Text style={{color: color.black, fontFamily: fonts.PoppinsBold}}>
-                  Departure Slot of the first flight
-                </Text>
-              </View>
+             
               {items2.map((item, index) => (
                 <View key={index} style={style.maincheckboxview1()}>
-                  <View style={{width: size.moderateScale(100)}}>
+                  <View style={{width: size.moderateScale(170)}}>
                     <Text style={style.labels()}>{item.label}</Text>
                   </View>
-                  <View style={{marginHorizontal: 210}}>
+                  <View style={{marginHorizontal: 135}}>
                     {checked.includes(item.label) ? (
                       <TouchableOpacity onPress={() => check(item.label)}>
                         <View
@@ -286,7 +284,7 @@ import {
                 marginHorizontal: size.moderateScale(25),
               }}>
               <Text style={{color: color.black, fontFamily: fonts.PoppinsBold}}>
-                Departure Slot of the Second flight
+              Type of place
               </Text>
               {items3.map((item, index) => (
                 <View key={index} style={style.maincheckboxview2()}>
@@ -338,6 +336,7 @@ import {
                 </View>
               ))}
             </View>
+           
           </ScrollView>
         </Modal>
   
