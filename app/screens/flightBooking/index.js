@@ -3,8 +3,10 @@ import React from 'react';
 import {IcHeaderBackArrow, color, size} from '../../theme';
 import Customheader from '../../components/CustomHeader';
 import FlightBookTop from '../../navigation/FlightBookingTop';
+import {useNavigation} from '@react-navigation/native';
 
 export default function FlightBook() {
+  const navigation = useNavigation();
   return (
     <>
       <View style={{backgroundColor: color.white}}>
@@ -14,6 +16,9 @@ export default function FlightBook() {
             type={'first'}
             img={<IcHeaderBackArrow />}
             text={'Flight booking'}
+            onPress={() => {
+              navigation.goBack();
+            }}
           />
         </View>
       </View>
