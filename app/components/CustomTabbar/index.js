@@ -129,8 +129,8 @@ export default function CustomeTabBar({
               <Text
                 style={{
                   fontSize: fontSize.extrasmall,
-                  fontFamily: fonts.PoppinsRegular,
-                  color: color.lightblack,
+                  fontFamily: fonts.PoppinsMedium,
+                  color: border == 1 ? color.rama : color.lightblack,
                 }}>
                 {text1}
               </Text>
@@ -152,8 +152,8 @@ export default function CustomeTabBar({
               <Text
                 style={{
                   fontSize: fontSize.extrasmall,
-                  fontFamily: fonts.PoppinsRegular,
-                  color: color.lightblack,
+                  fontFamily: fonts.PoppinsMedium,
+                  color: border == 0 ? color.rama : color.lightblack,
                 }}>
                 {text2}
               </Text>
