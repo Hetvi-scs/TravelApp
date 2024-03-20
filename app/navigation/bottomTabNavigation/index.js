@@ -18,6 +18,7 @@ import {
   IcOrangesuitcase,
   color,
 } from '../../theme';
+import Profile from '../../screens/Profile';
 
 export default function Bottomtab() {
   const Tab = createBottomTabNavigator();
@@ -75,7 +76,7 @@ export default function Bottomtab() {
       />
       <Tab.Screen
         name="Account"
-        component={Account}
+        component={Profile}
         options={{
             tabBarLabel: 'Account',
           tabBarIcon: ({focused}) => {
