@@ -1,15 +1,14 @@
 import {View, Text, StatusBar} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import PopularDestination from '../../screens/PopularDestination';
-import CreateYourOwn from '../../screens/CreateYourOwn';
 import CustomeTabBar from '../../components/CustomTabbar';
 import {color, size} from '../../theme';
 import {useNavigation} from '@react-navigation/native';
+import NewDelhi from '../../screens/NewDelhi';
+import Goa from '../../screens/Goa';
 
-export default function TopNavBar() {
+export default function FlightBookTop() {
   const Tab = createMaterialTopTabNavigator();
-
   return (
     <Tab.Navigator
       screenOptions={{
@@ -17,8 +16,8 @@ export default function TopNavBar() {
         swipeEnabled: false,
       }}
       tabBar={MyTabBar}>
-      <Tab.Screen name="PopularDestination" component={PopularDestination} />
-      <Tab.Screen name="CreateYourOwn" component={CreateYourOwn} />
+      <Tab.Screen name="NewDelhi" component={NewDelhi} />
+      <Tab.Screen name="Goa" component={Goa} />
     </Tab.Navigator>
   );
 }
@@ -32,20 +31,20 @@ function MyTabBar({state}) {
       {state.index == 0 ? (
         <CustomeTabBar
           onpress1={() => {
-            navigation.navigate('PopularDestination');
+            navigation.navigate('NewDelhi');
           }}
           onpress2={() => {
-            navigation.navigate('CreateYourOwn');
+            navigation.navigate('Goa');
           }}
           border={1}
         />
       ) : (
         <CustomeTabBar
           onpress1={() => {
-            navigation.navigate('PopularDestination');
+            navigation.navigate('NewDelhi');
           }}
           onpress2={() => {
-            navigation.navigate('CreateYourOwn');
+            navigation.navigate('Goa');
           }}
           border={0}
         />
