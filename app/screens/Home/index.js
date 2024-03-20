@@ -23,6 +23,7 @@ import CustomTextInput from '../../components/CustomTextInput';
 import HomeCard1 from '../../components/HomeCard1';
 import HomeCard2 from '../../components/HomeCard2';
 import * as styles from './styles';
+import {Screen} from '../../components/Screen';
 export default function Home() {
   const arra = [
     {
@@ -68,8 +69,12 @@ export default function Home() {
     },
   ];
   return (
+    // <Screen>
     <View>
-      <StatusBar translucent backgroundColor={'transparent'}></StatusBar>
+      <StatusBar
+        translucent
+        backgroundColor={'transparent'}
+        barStyle={'dark-content'}></StatusBar>
       <View style={styles.view()}>
         <View style={styles.imgview()}></View>
         <Image source={images.homepage} style={styles.img()} />
@@ -139,5 +144,6 @@ export default function Home() {
         </ScrollView>
       </View>
     </View>
+    // </Screen>
   );
 }

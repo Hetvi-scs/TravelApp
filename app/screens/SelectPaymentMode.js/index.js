@@ -33,7 +33,7 @@ export default function SelectPaymentMode() {
 <View>
     <View style={style.container()}>
 
-          <DueComponent/>
+          <View ><DueComponent/></View>
       <View style={style.paymain()}>
          <Text style={style.payopt()}>Payment options</Text>
         <View>
@@ -43,10 +43,19 @@ export default function SelectPaymentMode() {
         </View>
       </View>
 
-      <View>
-        <Text style={style.uppertxt()}>By proceeding, I understand and agree with the privacy policy,
+      <View style={{marginHorizontal:size.moderateScale(0)}}>
+        <Text style={style.uppertxt()}>
+        By proceeding, I understand and agree with the{' '}
+        <Text style={style.blueone()}>privacy policy</Text>
+        <Text>,</Text>
+        
+         the{' '}
+         <Text style={style.blueone()}>user agreement</Text>
+         <Text>{' '}and {' '}</Text>
+         <Text style={style.blueone()}>terms of service </Text>
+         <Text>of Tripify.</Text>
          </Text>
-         <Text style={style.uppertxt()}>the user agreement and terms of service of Tripify.</Text>
+
       </View>
 
     </View>
