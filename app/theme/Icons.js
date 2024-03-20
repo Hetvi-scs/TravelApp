@@ -76,6 +76,7 @@ import Rightwhitearrow from './images/svg/Rightwhitearrow';
 import Smallcheck from './images/svg/Smallcheck';
 import Tower2 from './images/svg/Tower2';
 import Stays from './images/svg/Stays';
+import CheckRight from './images/svg/CheckRight';
 
 export const IcRightwhitearrow = props => <Rightwhitearrow {...props} />;
 export const IcBeach = props => <Beach {...props} />;
@@ -156,3 +157,5 @@ export const IcOppositeArrow = props => <OppositeArrow {...props} />;
 export const IcSearchIndicator = props => <SearchIndicator {...props} />;
 export const IcTrustedPart = props => <TrustedPart {...props} />;
 export const IcStays=props=><Stays {...props}/>
+export const IcCheckRight=props=><CheckRight {...props}/>
+

@@ -1,7 +1,6 @@
 import {
   View,
   Text,
- 
   Modal,
   TouchableOpacity,
   ScrollView,
@@ -12,9 +11,8 @@ import {IcCheckRight, IcGraycross, color, fonts, size} from '../../theme';
 import Customheader from '../../components/CustomHeader';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
 import * as style from './styles';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-export default function Filterdata() {
+export default function Filter() {
   const [visibel, setVisible] = useState(false);
 
   const [checked, setChecked] = useState([]);
@@ -23,10 +21,10 @@ export default function Filterdata() {
       setChecked(checked.filter(co => co !== data));
       return;
     }
-    setChecked(counter => counter.concat(data));
+    setChecked(co => co.concat(data));
   };
   const items = [
-    {label: 'Non Stop', conut: 100},
+    {label: 'Non Stop'},
     {label: '1 Stop'},
     {label: 'More than 1'},
   ];
@@ -54,15 +52,11 @@ export default function Filterdata() {
     setChecked([]);
   };
   return (
-    <GestureHandlerRootView>
     <View>
-       <TouchableOpacity onPress={() => setVisible(true)}>
-        <View style={{width: 50, height: 50}}>
-          <Text>open</Text>
-        </View>
-      </TouchableOpacity>
-      </View>
-      <Modal visible={visibel} onRequestClose={() => setVisible(!visibel)}>
+      <Modal
+        visible={visibel}
+        onRequestClose={() => setVisible(!visibel)}
+        style={{height: 100, borderRadius: 8}}>
         <ScrollView>
           <Customheader
             type="first"
@@ -81,57 +75,57 @@ export default function Filterdata() {
               Stops
             </Text>
           </View>
-          <View>
-            {items.map((item, index) => (
-              <View key={index} style={style.maincheckboxview()}>
-                <View style={{width: size.moderateScale(100)}}>
-                  <Text style={style.labels()}>{item.label}</Text>
-                </View>
-                <View style={{marginHorizontal: 210}}>
-                  {checked.includes(item.label) ? (
-                    <TouchableOpacity onPress={() => check(item.label)}>
+
+          {items.map((item, index) => (
+            <View key={index} style={style.maincheckboxview()}>
+              <View style={{width: size.moderateScale(100)}}>
+                <Text style={style.labels()}>{item.label}</Text>
+              </View>
+              <View style={{marginHorizontal: 210}}>
+                {checked.includes(item?.label) ? (
+                  <TouchableOpacity onPress={() => check(item.label)}>
+                    <View
+                      style={{
+                        height: size.moderateScale(24),
+                        width: size.moderateScale(24),
+                        borderWidth: size.moderateScale(2.5),
+                        borderColor: color.rama,
+                        borderRadius: size.moderateScale(6),
+                      }}>
                       <View
                         style={{
-                          height: size.moderateScale(24),
-                          width: size.moderateScale(24),
-                          borderWidth: size.moderateScale(2.5),
-                          borderColor: color.rama,
-                          borderRadius: size.moderateScale(6),
+                          height: size.moderateScale(20),
+                          width: size.moderateScale(20),
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          backgroundColor: color.rama,
                         }}>
                         <View
                           style={{
-                            height: size.moderateScale(20),
-                            width: size.moderateScale(20),
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            backgroundColor: color.rama,
+                            height: size.moderateScale(10),
+                            width: size.moderateScale(10),
                           }}>
-                          <View
-                            style={{
-                              height: size.moderateScale(10),
-                              width: size.moderateScale(10),
-                            }}>
-                            <IcCheckRight />
-                          </View>
+                          <IcCheckRight />
                         </View>
                       </View>
-                    </TouchableOpacity>
-                  ) : (
-                    <TouchableOpacity onPress={() => check(item.label)}>
-                      <View
-                        style={{
-                          height: size.moderateScale(24),
-                          width: size.moderateScale(24),
-                          borderWidth: size.moderateScale(2.5),
-                          borderColor: color.gray,
-                          borderRadius: size.moderateScale(6),
-                        }}></View>
-                    </TouchableOpacity>
-                  )}
-                </View>
+                    </View>
+                  </TouchableOpacity>
+                ) : (
+                  <TouchableOpacity onPress={() => check(item.label)}>
+                    <View
+                      style={{
+                        height: size.moderateScale(24),
+                        width: size.moderateScale(24),
+                        borderWidth: size.moderateScale(2.5),
+                        borderColor: color.gray,
+                        borderRadius: size.moderateScale(6),
+                      }}></View>
+                  </TouchableOpacity>
+                )}
               </View>
-            ))}
-          </View>
+            </View>
+          ))}
+
           <View
             style={{
               marginHorizontal: size.moderateScale(25),
@@ -142,57 +136,55 @@ export default function Filterdata() {
               Airlines
             </Text>
           </View>
-          <View>
-            {items1.map((item, index) => (
-              <View key={index} style={style.maincheckboxview()}>
-                <View style={{width: size.moderateScale(100)}}>
-                  <Text style={style.labels()}>{item.label}</Text>
-                </View>
-                <View style={{marginHorizontal: 210}}>
-                  {checked.includes(item.label) ? (
-                    <TouchableOpacity onPress={() => check(item.label)}>
+          {items1.map((item, index) => (
+            <View key={index} style={style.maincheckboxview()}>
+              <View style={{width: size.moderateScale(100)}}>
+                <Text style={style.labels()}>{item.label}</Text>
+              </View>
+              <View style={{marginHorizontal: 210}}>
+                {checked.includes(item.label) ? (
+                  <TouchableOpacity onPress={() => check(item.label)}>
+                    <View
+                      style={{
+                        height: size.moderateScale(24),
+                        width: size.moderateScale(24),
+                        borderWidth: size.moderateScale(2.5),
+                        borderColor: color.rama,
+                        borderRadius: size.moderateScale(6),
+                      }}>
                       <View
                         style={{
-                          height: size.moderateScale(24),
-                          width: size.moderateScale(24),
-                          borderWidth: size.moderateScale(2.5),
-                          borderColor: color.rama,
-                          borderRadius: size.moderateScale(6),
+                          height: size.moderateScale(20),
+                          width: size.moderateScale(20),
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          backgroundColor: color.rama,
                         }}>
                         <View
                           style={{
-                            height: size.moderateScale(20),
-                            width: size.moderateScale(20),
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            backgroundColor: color.rama,
+                            height: size.moderateScale(10),
+                            width: size.moderateScale(10),
                           }}>
-                          <View
-                            style={{
-                              height: size.moderateScale(10),
-                              width: size.moderateScale(10),
-                            }}>
-                            <IcCheckRight />
-                          </View>
+                          <IcCheckRight />
                         </View>
                       </View>
-                    </TouchableOpacity>
-                  ) : (
-                    <TouchableOpacity onPress={() => check(item.label)}>
-                      <View
-                        style={{
-                          height: size.moderateScale(24),
-                          width: size.moderateScale(24),
-                          borderWidth: size.moderateScale(2.5),
-                          borderColor: color.gray,
-                          borderRadius: size.moderateScale(6),
-                        }}></View>
-                    </TouchableOpacity>
-                  )}
-                </View>
+                    </View>
+                  </TouchableOpacity>
+                ) : (
+                  <TouchableOpacity onPress={() => check(item.label)}>
+                    <View
+                      style={{
+                        height: size.moderateScale(24),
+                        width: size.moderateScale(24),
+                        borderWidth: size.moderateScale(2.5),
+                        borderColor: color.gray,
+                        borderRadius: size.moderateScale(6),
+                      }}></View>
+                  </TouchableOpacity>
+                )}
               </View>
-            ))}
-          </View>
+            </View>
+          ))}
           <View
             style={{
               marginHorizontal: size.moderateScale(25),
@@ -238,57 +230,55 @@ export default function Filterdata() {
                 Departure Slot of the first flight
               </Text>
             </View>
-            <View>
-              {items2.map((item, index) => (
-                <View key={index} style={style.maincheckboxview1()}>
-                  <View style={{width: size.moderateScale(100)}}>
-                    <Text style={style.labels()}>{item.label}</Text>
-                  </View>
-                  <View style={{marginHorizontal: 210}}>
-                    {checked.includes(item.label) ? (
-                      <TouchableOpacity onPress={() => check(item.label)}>
+            {items2.map((item, index) => (
+              <View key={index} style={style.maincheckboxview1()}>
+                <View style={{width: size.moderateScale(100)}}>
+                  <Text style={style.labels()}>{item.label}</Text>
+                </View>
+                <View style={{marginHorizontal: 210}}>
+                  {checked.includes(item.label) ? (
+                    <TouchableOpacity onPress={() => check(item.label)}>
+                      <View
+                        style={{
+                          height: size.moderateScale(24),
+                          width: size.moderateScale(24),
+                          borderWidth: size.moderateScale(2.5),
+                          borderColor: color.rama,
+                          borderRadius: size.moderateScale(6),
+                        }}>
                         <View
                           style={{
-                            height: size.moderateScale(24),
-                            width: size.moderateScale(24),
-                            borderWidth: size.moderateScale(2.5),
-                            borderColor: color.rama,
-                            borderRadius: size.moderateScale(6),
+                            height: size.moderateScale(20),
+                            width: size.moderateScale(20),
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            backgroundColor: color.rama,
                           }}>
                           <View
                             style={{
-                              height: size.moderateScale(20),
-                              width: size.moderateScale(20),
-                              justifyContent: 'center',
-                              alignItems: 'center',
-                              backgroundColor: color.rama,
+                              height: size.moderateScale(10),
+                              width: size.moderateScale(10),
                             }}>
-                            <View
-                              style={{
-                                height: size.moderateScale(10),
-                                width: size.moderateScale(10),
-                              }}>
-                              <IcCheckRight />
-                            </View>
+                            <IcCheckRight />
                           </View>
                         </View>
-                      </TouchableOpacity>
-                    ) : (
-                      <TouchableOpacity onPress={() => check(item.label)}>
-                        <View
-                          style={{
-                            height: size.moderateScale(24),
-                            width: size.moderateScale(24),
-                            borderWidth: size.moderateScale(2.5),
-                            borderColor: color.gray,
-                            borderRadius: size.moderateScale(6),
-                          }}></View>
-                      </TouchableOpacity>
-                    )}
-                  </View>
+                      </View>
+                    </TouchableOpacity>
+                  ) : (
+                    <TouchableOpacity onPress={() => check(item.label)}>
+                      <View
+                        style={{
+                          height: size.moderateScale(24),
+                          width: size.moderateScale(24),
+                          borderWidth: size.moderateScale(2.5),
+                          borderColor: color.gray,
+                          borderRadius: size.moderateScale(6),
+                        }}></View>
+                    </TouchableOpacity>
+                  )}
                 </View>
-              ))}
-            </View>
+              </View>
+            ))}
           </View>
           <View
             style={{
@@ -298,62 +288,64 @@ export default function Filterdata() {
             <Text style={{color: color.black, fontFamily: fonts.PoppinsBold}}>
               Departure Slot of the Second flight
             </Text>
-            <View>
-              {items3.map((item, index) => (
-                <View key={index} style={style.maincheckboxview2()}>
-                  <View style={{width: size.moderateScale(100)}}>
-                    <Text style={style.labels()}>{item.label}</Text>
-                  </View>
-                  <View style={{marginHorizontal: 210}}>
-                    {checked.includes(item.label) ? (
-                      <TouchableOpacity onPress={() => check(item.label)}>
+            {items3.map((item, index) => (
+              <View key={index} style={style.maincheckboxview2()}>
+                <View style={{width: size.moderateScale(100)}}>
+                  <Text style={style.labels()}>{item.label}</Text>
+                </View>
+                <View style={{marginHorizontal: 210}}>
+                  {checked.includes(item.label) ? (
+                    <TouchableOpacity onPress={() => check(item.label)}>
+                      <View
+                        style={{
+                          height: size.moderateScale(24),
+                          width: size.moderateScale(24),
+                          borderWidth: size.moderateScale(2.5),
+                          borderColor: color.rama,
+                          borderRadius: size.moderateScale(6),
+                        }}>
                         <View
                           style={{
-                            height: size.moderateScale(24),
-                            width: size.moderateScale(24),
-                            borderWidth: size.moderateScale(2.5),
-                            borderColor: color.rama,
-                            borderRadius: size.moderateScale(6),
+                            height: size.moderateScale(20),
+                            width: size.moderateScale(20),
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            backgroundColor: color.rama,
                           }}>
                           <View
                             style={{
-                              height: size.moderateScale(20),
-                              width: size.moderateScale(20),
-                              justifyContent: 'center',
-                              alignItems: 'center',
-                              backgroundColor: color.rama,
+                              height: size.moderateScale(10),
+                              width: size.moderateScale(10),
                             }}>
-                            <View
-                              style={{
-                                height: size.moderateScale(10),
-                                width: size.moderateScale(10),
-                              }}>
-                              <IcCheckRight />
-                            </View>
+                            <IcCheckRight />
                           </View>
                         </View>
-                      </TouchableOpacity>
-                    ) : (
-                      <TouchableOpacity onPress={() => check(item.label)}>
-                        <View
-                          style={{
-                            height: size.moderateScale(24),
-                            width: size.moderateScale(24),
-                            borderWidth: size.moderateScale(2.5),
-                            borderColor: color.gray,
-                            borderRadius: size.moderateScale(6),
-                          }}></View>
-                      </TouchableOpacity>
-                    )}
-                  </View>
+                      </View>
+                    </TouchableOpacity>
+                  ) : (
+                    <TouchableOpacity onPress={() => check(item.label)}>
+                      <View
+                        style={{
+                          height: size.moderateScale(24),
+                          width: size.moderateScale(24),
+                          borderWidth: size.moderateScale(2.5),
+                          borderColor: color.gray,
+                          borderRadius: size.moderateScale(6),
+                        }}></View>
+                    </TouchableOpacity>
+                  )}
                 </View>
-              ))}
-            </View>
+              </View>
+            ))}
           </View>
         </ScrollView>
       </Modal>
 
-      </GestureHandlerRootView>
-   
+      <TouchableOpacity onPress={() => setVisible(true)}>
+        <View style={{width: 50, height: 50}}>
+          <Text>open</Text>
+        </View>
+      </TouchableOpacity>
+    </View>
   );
 }

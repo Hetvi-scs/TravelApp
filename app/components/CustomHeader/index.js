@@ -22,12 +22,29 @@ export default function Customheader({
 }) {
   if (type == 'first') {
     return (
-      <View>
+      <View style={{
+        // backgroundColor:'blue', 
+        marginHorizontal:25, marginTop:20}}>
         <View style={styles.mainview()}>
-          <TouchableOpacity onPress={onPress}>
+          <TouchableOpacity
+            onPress={onPress}
+            style={{
+              // backgroundColor:'yellow',
+              justifyContent: 'center',  alignItems: 'center',width:size.moderateScale(40)}}>
             <View>{img}</View>
           </TouchableOpacity>
-          <View style={{}}>
+          <View
+            style={{
+              // justifyContent: 'center',
+              // alignSelf: 'center',
+             // marginRight:20
+            //  height: size.moderateScale(50),
+            // width: size.moderateScale(200),
+             alignItems: 'center',
+            // backgroundColor:'red',
+             flex:1,
+            justifyContent: 'center',
+            }}>
             <Text style={styles.text()}>{text}</Text>
           </View>
           <View>
@@ -53,7 +70,9 @@ export default function Customheader({
               <View style={styles.secondimgview()}>{img}</View>
             </TouchableOpacity>
             <View style={styles.txtview()}>
-              <Text style={styles.txt()}>{text}</Text>
+              <View style={{}}>
+                <Text style={styles.txt()}>{text}</Text>
+              </View>
               <TouchableOpacity onPress={onPress}>
                 <Text style={styles.txt2()}>{text2}</Text>
               </TouchableOpacity>
@@ -66,27 +85,24 @@ export default function Customheader({
         </View>
       </View>
     );
-  } else if (type == 'third') {
+  }  if (type == 'third') {
     return (
-      <View
-        style={styles.thirdmainview()}>
-        <View
-          style={styles.thirdsecondview()}>
+      <View style={styles.thirdmainview()}>
+        <View style={styles.thirdsecondview()}>
           <TouchableOpacity onPress={onPress}>
-            <View
-              style={styles.thirdimgview()}>
-              {img}
-            </View>
+            <View style={styles.thirdimgview()}>{img}</View>
           </TouchableOpacity>
-          <View
-            style={styles.thirdtxtview()}>
-            <Text
-              style={styles.thirdtxt()}>
-              {text3}
-            </Text>
+          <View style={styles.thirdtxtview()}>
+            <Text style={styles.thirdtxt()}>{text3}</Text>
           </View>
         </View>
       </View>
     );
+  }
+
+  else if(type=='fourth') {
+    return(
+      <View></View>
+    )
   }
 }

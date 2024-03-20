@@ -20,16 +20,14 @@ import {
   size,
 } from '../../theme';
 import Profile from '../../screens/Profile';
+import Multi from '../MulticityNavigation';
 
 export default function Bottomtab() {
   const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
-      screenOptions={{
-        headerShown: false,
-        tabBarActiveTintColor: color.orange,
-        tabBarStyle: {height:size.moderateScale (60)},
-      }}>
+      safeAreaInsets={'top'}
+      screenOptions={{headerShown: false, tabBarActiveTintColor: color.orange}}>
       <Tab.Screen
         name="Home"
         component={Home}
@@ -44,7 +42,6 @@ export default function Bottomtab() {
         name="Notification"
         component={Notification}
         options={{
-          tabBarLabelStyle: {paddingBottom: 10},
           tabBarLabel: 'Notifications',
           tabBarIcon: ({focused}) => {
             return (
@@ -69,10 +66,9 @@ export default function Bottomtab() {
         }}
       />
       <Tab.Screen
-        name="MultiCity"
-        component={MultiCity}
+        name="Multi"
+        component={Multi}
         options={{
-          tabBarLabelStyle: {paddingBottom: 10},
           tabBarLabel: 'Multi-city',
           tabBarIcon: ({focused}) => {
             return (
@@ -87,7 +83,6 @@ export default function Bottomtab() {
         name="Account"
         component={Profile}
         options={{
-          tabBarLabelStyle: {paddingBottom: 10},
           tabBarLabel: 'Account',
           tabBarIcon: ({focused}) => {
             return (
