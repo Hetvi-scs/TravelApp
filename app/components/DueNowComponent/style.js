@@ -37,7 +37,7 @@ export const ftxt = () => ({
     width:size.moderateScale(20),
     borderRadius:size.moderateScale(20),
    alignItems:'center',
-   borderWidth:1,
+   borderWidth:1.5,
    borderColor:color.gray,
 justifyContent:'center'
   })
