@@ -5,6 +5,8 @@ export const container = () => ({
   marginHorizontal: size.moderateScale(25),
   borderRadius: 8,
   backgroundColor: color.white,
+  borderColor: color.gray,
+  borderWidth: 0.5,
 });
 export const vistaraimg = () => ({
   height: size.moderateScale(24),
@@ -49,8 +51,8 @@ export const txt2 = () => ({
   color: color.black,
   marginHorizontal: size.moderateScale(12),
 });
-export const rectangle = (clr) => ({
-  backgroundColor: clr ? clr :color.parrotgreen,
+export const rectangle = clr => ({
+  backgroundColor: clr ? clr : color.parrotgreen,
   width: 80,
   height: 2,
 
@@ -108,7 +110,6 @@ export const lasttxt = () => ({
   fontSize: size.moderateScale(11),
   fontFamily: fonts.PoppinsLight,
   color: color.black,
-  marginVertical:size.moderateScale(15),
-  marginHorizontal:size.moderateScale(-13),
-
+  marginVertical: size.moderateScale(15),
+  marginHorizontal: size.moderateScale(-13),
 });
