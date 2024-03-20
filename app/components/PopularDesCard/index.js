@@ -8,7 +8,6 @@
 //   return (
 // <View style={style.container()}>
 
-
 //    <View style={style.mainimage()}>
 //         <View style={style.bigimageview()}>
 //             <Image
@@ -47,7 +46,7 @@
 //             />
 //             <View style={style.imgtxtview()}>
 //             <Text style={style.imgtxt()}>+40</Text></View>
-//             </View>   
+//             </View>
 //      </View>
 //      </View>
 
@@ -56,19 +55,19 @@
 // <View style={style.secmain()}>
 // {/* <View style={{justifyContent:'center',alignItems:'center',marginTop:15}}>
 //    <CustomReview2/>
-//     <View 
-//     style={style.dotview()}>   
+//     <View
+//     style={style.dotview()}>
 //     </View>
-   
+
 //     </View>
-//     <View style={style.reviewtxt()}> 
+//     <View style={style.reviewtxt()}>
 //     <Text>Very good 200 Reviews</Text>
 //     <Text>Starting at $40.7</Text>
 //     </View> */}
 //        <View style={style.leftview()}>
 //            <View style={style.starview}><CustomReview2/></View>
-//             <View 
-//              style={style.dotview()}>   
+//             <View
+//              style={style.dotview()}>
 //             </View>
 //             <View><Text style={style.reviewtxt()}>Very good 200 Reviews</Text>
 //             </View>
@@ -78,8 +77,8 @@
 //        </View>
 
 // </View>
-  
-// </View>  
+
+// </View>
 //   )
 // }
 
@@ -115,7 +114,7 @@ export default function PopularDesCrad({
   distance,
   brftxt,
   btntxt,
-  days
+  days,
 }) {
   return (
     <View>
@@ -124,9 +123,10 @@ export default function PopularDesCrad({
           height: size.moderateScale(275),
           marginHorizontal: size.moderateScale(25),
           borderRadius: 8,
+          borderWidth: 0.5,
+          borderColor: color.gray,
           backgroundColor: color.white,
-        // backgroundColor:'rgb(177, 246, 186)',
-
+          // backgroundColor:'rgb(177, 246, 186)',
         }}>
         <View
           style={{
@@ -234,13 +234,13 @@ export default function PopularDesCrad({
               marginVertical: 7,
               marginHorizontal: 7,
               borderRadius: 8,
-              flexDirection:'row'
+              flexDirection: 'row',
             }}></View>
           <Text
             style={{
               fontSize: size.moderateScale(10),
               fontFamily: fonts.PoppinsLight,
-              color:color.black
+              color: color.black,
             }}>
             Very good
           </Text>
@@ -248,18 +248,18 @@ export default function PopularDesCrad({
             style={{
               fontSize: size.moderateScale(10),
               fontFamily: fonts.PoppinsLight,
-              marginHorizontal:size.moderateScale(5),
-              color:color.black
+              marginHorizontal: size.moderateScale(5),
+              color: color.black,
             }}>
-                {rtxt} 
+            {rtxt}
           </Text>
           <Text
             style={{
               fontSize: size.moderateScale(10),
               fontFamily: fonts.PoppinsLight,
-              color:color.black
+              color: color.black,
             }}>
-                reviews 
+            reviews
           </Text>
           <View style={{flexDirection: 'column'}}>
             <View
@@ -273,15 +273,14 @@ export default function PopularDesCrad({
                   fontFamily: fonts.PoppinsRegular,
                   color: color.black,
                 }}>
-               Starting at
+                Starting at
               </Text>
               <Text
                 style={{
                   fontSize: fontSize.extrasmall,
                   color: color.black,
                   fontFamily: fonts.PoppinsMedium,
-                marginHorizontal: size.moderateScale(3),
-                  
+                  marginHorizontal: size.moderateScale(3),
                 }}>
                 $
               </Text>
@@ -294,82 +293,77 @@ export default function PopularDesCrad({
                 {price}
               </Text>
             </View>
-            <View style={{marginHorizontal: size.moderateScale(60)}}>
-              
-            </View>
+            <View style={{marginHorizontal: size.moderateScale(60)}}></View>
           </View>
         </View>
 
         <View style={{flexDirection: 'column', marginVertical: 10}}>
-        <View style={{
-            flexDirection:'row'
-        }}>
           <View
             style={{
-              marginHorizontal: size.moderateScale(5),
-
               flexDirection: 'row',
-              marginVertical: size.moderateScale(5),
-            //   backgroundColor:'purple',
-              width:200
             }}>
-            <IcLocation width={15} />
-            <Text
+            <View
               style={{
-                fontSize: fontSize.small,
-                fontFamily: fonts.PoppinsMedium,
-                color: color.black,
-                marginVertical: size.moderateScale(-5),
-                // backgroundColor:'red'
-              }}>
-              {location}
-            </Text>
+                marginHorizontal: size.moderateScale(5),
 
-           
-          </View>
-           <View
-            style={{
-            //   width: size.moderateScale(80),
-              marginHorizontal: size.moderateScale(55),
-            //   backgroundColor:'yellow',
-            //   alignItems:'flex-end'
-            }}>
-         <View 
-         style={{
-          flexDirection:'row',
-          // backgroundColor:'pink',
-          height:size.moderateScale(20),
-          width:size.moderateScale(81),
-          borderWidth:1,
-          borderColor:color.semigray,
-          justifyContent:'center',
-          alignSelf:'center',
-          alignItems:'center',
-          marginLeft:size.moderateScale(-16),
-          borderRadius:size.moderateScale(6),
-         }}
-         >   
-            <Text
-            style={{
-              fontSize: size.moderateScale(11),
-              fontFamily: fonts.PoppinsRegular,
-              // marginHorizontal:size.moderateScale(5),
-              color:color.black,
-             
-            }}>
-            {days} 
-          </Text>
-            <Text
-              style={{
-                fontSize: size.moderateScale(11),
-                color: color.black,
-                fontFamily: fonts.PoppinsRegular,
+                flexDirection: 'row',
+                marginVertical: size.moderateScale(5),
+                //   backgroundColor:'purple',
+                width: 200,
               }}>
-              days tour
-            </Text>
-         </View>
+              <IcLocation width={15} />
+              <Text
+                style={{
+                  fontSize: fontSize.small,
+                  fontFamily: fonts.PoppinsMedium,
+                  color: color.black,
+                  marginVertical: size.moderateScale(-5),
+                  // backgroundColor:'red'
+                }}>
+                {location}
+              </Text>
+            </View>
+            <View
+              style={{
+                //   width: size.moderateScale(80),
+                marginHorizontal: size.moderateScale(55),
+                //   backgroundColor:'yellow',
+                //   alignItems:'flex-end'
+              }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  // backgroundColor:'pink',
+                  height: size.moderateScale(20),
+                  width: size.moderateScale(81),
+                  borderWidth: 1,
+                  borderColor: color.semigray,
+                  justifyContent: 'center',
+                  alignSelf: 'center',
+                  alignItems: 'center',
+                  marginLeft: size.moderateScale(-16),
+                  borderRadius: size.moderateScale(6),
+                }}>
+                <Text
+                  style={{
+                    fontSize: size.moderateScale(11),
+                    fontFamily: fonts.PoppinsRegular,
+                    // marginHorizontal:size.moderateScale(5),
+                    color: color.black,
+                  }}>
+                  {days}
+                </Text>
+                <Text
+                  style={{
+                    fontSize: size.moderateScale(11),
+                    color: color.black,
+                    fontFamily: fonts.PoppinsRegular,
+                  }}>
+                  days tour
+                </Text>
+              </View>
+            </View>
           </View>
-</View>
           {/* ----------------------------- */}
           <View style={{marginHorizontal: size.moderateScale(8)}}>
             <Text
@@ -386,7 +380,6 @@ export default function PopularDesCrad({
               flexDirection: 'row',
               alignItems: 'center',
               width: size.moderateScale(340),
-             
             }}>
             <View
               style={{
@@ -406,7 +399,7 @@ export default function PopularDesCrad({
                 style={{
                   fontSize: size.moderateScale(10),
                   fontFamily: fonts.PoppinsSemiBold,
-                  color:color.black
+                  color: color.black,
                 }}>
                 Trusted Partner
               </Text>
