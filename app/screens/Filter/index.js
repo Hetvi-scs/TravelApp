@@ -7,29 +7,53 @@ import {
   ScrollView,
 } from 'react-native';
 import React, {useState} from 'react';
-import {flex} from '../../components/CreateOwn/styles';
-import {IcGraycross, color, fonts, size} from '../../theme';
+
+import {IcCheckRight, IcGraycross, color, fonts, size} from '../../theme';
 import Customheader from '../../components/CustomHeader';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
-import * as style from './styles'
+import * as style from './styles';
+
 
 export default function Filter() {
   const [visibel, setVisible] = useState(false);
-  const arr = ['Non Stop', '1 Stop', 'More than 1'];
-  const array = [
-    'Air India',
-    'Air Asia',
-    'IndiGo',
-    'GoAir',
-    'Spicejet',
-    'Vistara',
+
+  const [checked, setChecked] = useState([]);
+  const check = data => {
+    if (checked.includes(data)) {
+      setChecked(checked.filter(co => co !== data));
+      return;
+    }
+    setChecked(co => co.concat(data));
+  };
+  const items = [
+    {label: 'Non Stop'},
+    {label: '1 Stop'},
+    {label: 'More than 1'},
   ];
-  const Departure = [
-    'Before 6AM',
-    '6AM - 12 Noon',
-    '12 Noon - 6PM',
-    'After 6PM',
+  const items2 = [
+    {label: 'Before 6AM'},
+    {label: '6AM - 12 Noon'},
+    {label: '12 Noon - 6PM'},
+    {label: 'After 6PM'},
   ];
+  const items3 = [
+    {label: 'Before 6AM'},
+    {label: '6AM - 12 Noon'},
+    {label: '12 Noon - 6PM'},
+    {label: 'After 6PM'},
+  ];
+  const items1 = [
+    {label: 'Air India'},
+    {label: 'Air Asia'},
+    {label: 'IndiGo'},
+    {label: 'GoAir'},
+    {label: 'Spicejet'},
+    {label: 'Vistara'},
+  ];
+  const handleClear = () => {
+   
+    setChecked([]);
+  };
   return (
     <View>
       <Modal
@@ -39,8 +63,10 @@ export default function Filter() {
         <ScrollView>
           <Customheader
             type="first"
+            onPress={() => setVisible(false)}
             img={<IcGraycross />}
             text="Filters"
+            onPressl={handleClear}
             text1={'Clear'}></Customheader>
           <View
             style={{
@@ -52,17 +78,57 @@ export default function Filter() {
               Stops
             </Text>
           </View>
-          {arr.map(data => {
-            return (
-              <View
-                style={{
-                  marginHorizontal: size.moderateScale(25),
-                  marginVertical: size.moderateScale(5),
-                }}>
-                <Text style={{fontFamily: fonts.PoppinsRegular}}>{data}</Text>
+
+          {items.map((item, index) => (
+            <View key={index} style={style.maincheckboxview()}>
+              <View style={{width: size.moderateScale(100)}}>
+                <Text style={style.label()}>{item.label}</Text>
               </View>
-            );
-          })}
+              <View style={{marginHorizontal: 210}}>
+                {checked.includes(item.label) ? (
+                  <TouchableOpacity onPress={() => check(item.label)}>
+                    <View
+                      style={{
+                        height: size.moderateScale(24),
+                        width: size.moderateScale(24),
+                        borderWidth: size.moderateScale(2.5),
+                        borderColor: color.rama,
+                        borderRadius: size.moderateScale(6),
+                      }}>
+                      <View
+                        style={{
+                          height: size.moderateScale(20),
+                          width: size.moderateScale(20),
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          backgroundColor: color.rama,
+                        }}>
+                        <View
+                          style={{
+                            height: size.moderateScale(10),
+                            width: size.moderateScale(10),
+                          }}>
+                          <IcCheckRight />
+                        </View>
+                      </View>
+                    </View>
+                  </TouchableOpacity>
+                ) : (
+                  <TouchableOpacity onPress={() => check(item.label)}>
+                    <View
+                      style={{
+                        height: size.moderateScale(24),
+                        width: size.moderateScale(24),
+                        borderWidth: size.moderateScale(2.5),
+                        borderColor: color.gray,
+                        borderRadius: size.moderateScale(6),
+                      }}></View>
+                  </TouchableOpacity>
+                )}
+              </View>
+            </View>
+          ))}
+
           <View
             style={{
               marginHorizontal: size.moderateScale(25),
@@ -73,17 +139,55 @@ export default function Filter() {
               Airlines
             </Text>
           </View>
-          {array.map(data => {
-            return (
-              <View
-                style={{
-                  marginHorizontal: size.moderateScale(25),
-                  marginVertical: size.moderateScale(5),
-                }}>
-                <Text style={{fontFamily: fonts.PoppinsRegular}}>{data}</Text>
+          {items1.map((item, index) => (
+            <View key={index} style={style.maincheckboxview()}>
+              <View style={{width: size.moderateScale(100)}}>
+                <Text style={style.label()}>{item.label}</Text>
               </View>
-            );
-          })}
+              <View style={{marginHorizontal: 210}}>
+                {checked.includes(item.label) ? (
+                  <TouchableOpacity onPress={() => check(item.label)}>
+                    <View
+                      style={{
+                        height: size.moderateScale(24),
+                        width: size.moderateScale(24),
+                        borderWidth: size.moderateScale(2.5),
+                        borderColor: color.rama,
+                        borderRadius: size.moderateScale(6),
+                      }}>
+                      <View
+                        style={{
+                          height: size.moderateScale(20),
+                          width: size.moderateScale(20),
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          backgroundColor: color.rama,
+                        }}>
+                        <View
+                          style={{
+                            height: size.moderateScale(10),
+                            width: size.moderateScale(10),
+                          }}>
+                          <IcCheckRight />
+                        </View>
+                      </View>
+                    </View>
+                  </TouchableOpacity>
+                ) : (
+                  <TouchableOpacity onPress={() => check(item.label)}>
+                    <View
+                      style={{
+                        height: size.moderateScale(24),
+                        width: size.moderateScale(24),
+                        borderWidth: size.moderateScale(2.5),
+                        borderColor: color.gray,
+                        borderRadius: size.moderateScale(6),
+                      }}></View>
+                  </TouchableOpacity>
+                )}
+              </View>
+            </View>
+          ))}
           <View
             style={{
               marginHorizontal: size.moderateScale(25),
@@ -94,7 +198,25 @@ export default function Filter() {
               Price range
             </Text>
             <View style={{marginHorizontal: size.moderateScale(25)}}>
-              <MultiSlider></MultiSlider>
+              <MultiSlider
+                trackStyle={{
+                  height: size.moderateScale(3),
+                  borderRadius: size.moderateScale(4),
+                }}
+                values={[100]}
+                selectedStyle={{backgroundColor: color.rama}}
+                min={100}
+                    max={2000}></MultiSlider>
+            </View>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginHorizontal: size.moderateScale(21),
+              }}>
+              <Text>$100</Text>
+              <View style={{marginLeft: size.moderateScale(205)}}>
+                <Text>$2000</Text>
+              </View>
             </View>
           </View>
 
@@ -111,43 +233,123 @@ export default function Filter() {
                 Departure Slot of the first flight
               </Text>
             </View>
-            {Departure.map(data => {
-              return (
-                <View
-                  style={{
-                    marginVertical: size.moderateScale(5),
-                  }}>
-                  <Text style={{fontFamily: fonts.PoppinsRegular}}>{data}</Text>
+            {items2.map((item, index) => (
+              <View key={index} style={style.maincheckboxview1()}>
+                <View style={{width: size.moderateScale(100)}}>
+                  <Text style={style.label()}>{item.label}</Text>
                 </View>
-              );
-            })}
+                <View style={{marginHorizontal: 210}}>
+                  {checked.includes(item.label) ? (
+                    <TouchableOpacity onPress={() => check(item.label)}>
+                      <View
+                        style={{
+                          height: size.moderateScale(24),
+                          width: size.moderateScale(24),
+                          borderWidth: size.moderateScale(2.5),
+                          borderColor: color.rama,
+                          borderRadius: size.moderateScale(6),
+                        }}>
+                        <View
+                          style={{
+                            height: size.moderateScale(20),
+                            width: size.moderateScale(20),
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            backgroundColor: color.rama,
+                          }}>
+                          <View
+                            style={{
+                              height: size.moderateScale(10),
+                              width: size.moderateScale(10),
+                            }}>
+                            <IcCheckRight />
+                          </View>
+                        </View>
+                      </View>
+                    </TouchableOpacity>
+                  ) : (
+                    <TouchableOpacity onPress={() => check(item.label)}>
+                      <View
+                        style={{
+                          height: size.moderateScale(24),
+                          width: size.moderateScale(24),
+                          borderWidth: size.moderateScale(2.5),
+                          borderColor: color.gray,
+                          borderRadius: size.moderateScale(6),
+                        }}></View>
+                    </TouchableOpacity>
+                  )}
+                </View>
+              </View>
+            ))}
           </View>
-          <View style={{marginVertical: size.moderateScale(20),marginHorizontal:size.moderateScale(25)}}>
-              <Text style={{color: color.black, fontFamily: fonts.PoppinsBold}}>
+          <View
+            style={{
+              marginVertical: size.moderateScale(20),
+              marginHorizontal: size.moderateScale(25),
+            }}>
+            <Text style={{color: color.black, fontFamily: fonts.PoppinsBold}}>
               Departure Slot of the Second flight
-              </Text>
-              {Departure.map(data => {
-              return (
-                <View
-                  style={{
-                    marginVertical: size.moderateScale(5),
-                  }}>
-                  <Text style={{fontFamily: fonts.PoppinsRegular}}>{data}</Text>
+            </Text>
+            {items3.map((item, index) => (
+              <View key={index} style={style.maincheckboxview2()}>
+                <View style={{width: size.moderateScale(100)}}>
+                  <Text style={style.label()}>{item.label}</Text>
                 </View>
-              );
-            })}
-            </View>
+                <View style={{marginHorizontal: 210}}>
+                  {checked.includes(item.label) ? (
+                    <TouchableOpacity onPress={() => check(item.label)}>
+                      <View
+                        style={{
+                          height: size.moderateScale(24),
+                          width: size.moderateScale(24),
+                          borderWidth: size.moderateScale(2.5),
+                          borderColor: color.rama,
+                          borderRadius: size.moderateScale(6),
+                        }}>
+                        <View
+                          style={{
+                            height: size.moderateScale(20),
+                            width: size.moderateScale(20),
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            backgroundColor: color.rama,
+                          }}>
+                          <View
+                            style={{
+                              height: size.moderateScale(10),
+                              width: size.moderateScale(10),
+                            }}>
+                            <IcCheckRight />
+                          </View>
+                        </View>
+                      </View>
+                    </TouchableOpacity>
+                  ) : (
+                    <TouchableOpacity onPress={() => check(item.label)}>
+                      <View
+                        style={{
+                          height: size.moderateScale(24),
+                          width: size.moderateScale(24),
+                          borderWidth: size.moderateScale(2.5),
+                          borderColor: color.gray,
+                          borderRadius: size.moderateScale(6),
+                        }}></View>
+                    </TouchableOpacity>
+                  )}
+                </View>
+              </View>
+            ))}
+          </View>
         </ScrollView>
       </Modal>
 
       <TouchableOpacity onPress={() => setVisible(true)}>
         <View style={{width: 50, height: 50}}>
           <Text>open</Text>
+        
         </View>
       </TouchableOpacity>
-      
-                  
-                   
     </View>
   );
 }

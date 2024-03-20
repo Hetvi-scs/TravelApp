@@ -1,4 +1,4 @@
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, StatusBar} from 'react-native';
 import React from 'react';
 import {
   IcGreenActiveStar,
@@ -17,6 +17,7 @@ import * as styles from './styles';
 export default function SplashScreen() {
   return (
     <View>
+      <StatusBar translucent backgroundColor={'transparent'}></StatusBar>
       <View style={styles.view()}>
         <View style={styles.mark()}>
           <IcWhitetower />

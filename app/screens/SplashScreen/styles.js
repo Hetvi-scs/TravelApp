@@ -2,7 +2,7 @@ import {color, fontSize, fonts, size} from '../../theme';
 
 export const view = () => ({
   width: size.deviceWidth,
-  height: size.moderateScale(400),
+  height: size.moderateScale(410),
   borderBottomLeftRadius: size.moderateScale(48),
   borderBottomRightRadius: size.moderateScale(48),
 });
@@ -15,7 +15,7 @@ export const mark = () => ({
 
 export const img = () => ({
   width: size.deviceWidth,
-  height: size.moderateScale(400),
+  height: size.moderateScale(410),
   borderBottomLeftRadius: size.moderateScale(48),
   borderBottomRightRadius: size.moderateScale(48),
 });

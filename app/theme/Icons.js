@@ -73,6 +73,7 @@ import Graysinglestar from './images/svg/Graysinglestar';
 import Whiteheart from './images/svg/Whiteheart';
 import Bluelocation from './images/svg/Bluelocation';
 import Rightwhitearrow from './images/svg/Rightwhitearrow';
+import CheckRight from './images/svg/CheckRight';
 
 export const IcRightwhitearrow = props => <Rightwhitearrow {...props} />;
 export const IcBeach = props => <Beach {...props} />;
@@ -152,3 +153,4 @@ export const IcLongRightBlueArrow = props => <LongRightBlueArrow {...props} />;
 export const IcOppositeArrow = props => <OppositeArrow {...props} />;
 export const IcSearchIndicator = props => <SearchIndicator {...props} />;
 export const IcTrustedPart = props => <TrustedPart {...props} />;
+export const IcCheckRight = props => <CheckRight {...props} />;
