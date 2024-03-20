@@ -17,6 +17,7 @@ import {
   IcOrangemulticity,
   IcOrangesuitcase,
   color,
+  size,
 } from '../../theme';
 import Profile from '../../screens/Profile';
 import Multi from '../MulticityNavigation';
@@ -26,12 +27,15 @@ export default function Bottomtab() {
   return (
     <Tab.Navigator
       safeAreaInsets={'top'}
-      screenOptions={{headerShown: false, tabBarActiveTintColor: color.orange}}>
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: color.orange,
+        tabBarStyle: {height: size.moderateScale(50)},
+      }}>
       <Tab.Screen
         name="Home"
         component={Home}
         options={{
-          tabBarLabelStyle: {paddingBottom: 10},
           tabBarIcon: ({focused}) => {
             return <View>{focused ? <IcOrangehome /> : <IcGrayhome />}</View>;
           },
@@ -55,7 +59,6 @@ export default function Bottomtab() {
         name="My Trips"
         component={MyTrips}
         options={{
-          tabBarLabelStyle: {paddingBottom: 10},
           tabBarLabel: 'My Trips',
           tabBarIcon: ({focused}) => {
             return (

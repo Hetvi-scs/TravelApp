@@ -1,7 +1,6 @@
 import {
   View,
   Text,
-  Button,
   Modal,
   TouchableOpacity,
   ScrollView,
@@ -12,7 +11,6 @@ import {IcCheckRight, IcGraycross, color, fonts, size} from '../../theme';
 import Customheader from '../../components/CustomHeader';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
 import * as style from './styles';
-
 
 export default function Filter() {
   const [visibel, setVisible] = useState(false);
@@ -51,7 +49,6 @@ export default function Filter() {
     {label: 'Vistara'},
   ];
   const handleClear = () => {
-   
     setChecked([]);
   };
   return (
@@ -82,10 +79,10 @@ export default function Filter() {
           {items.map((item, index) => (
             <View key={index} style={style.maincheckboxview()}>
               <View style={{width: size.moderateScale(100)}}>
-                <Text style={style.label()}>{item.label}</Text>
+                <Text style={style.labels()}>{item.label}</Text>
               </View>
               <View style={{marginHorizontal: 210}}>
-                {checked.includes(item.label) ? (
+                {checked.includes(item?.label) ? (
                   <TouchableOpacity onPress={() => check(item.label)}>
                     <View
                       style={{
@@ -142,7 +139,7 @@ export default function Filter() {
           {items1.map((item, index) => (
             <View key={index} style={style.maincheckboxview()}>
               <View style={{width: size.moderateScale(100)}}>
-                <Text style={style.label()}>{item.label}</Text>
+                <Text style={style.labels()}>{item.label}</Text>
               </View>
               <View style={{marginHorizontal: 210}}>
                 {checked.includes(item.label) ? (
@@ -206,7 +203,7 @@ export default function Filter() {
                 values={[100]}
                 selectedStyle={{backgroundColor: color.rama}}
                 min={100}
-                    max={2000}></MultiSlider>
+                max={2000}></MultiSlider>
             </View>
             <View
               style={{
@@ -236,7 +233,7 @@ export default function Filter() {
             {items2.map((item, index) => (
               <View key={index} style={style.maincheckboxview1()}>
                 <View style={{width: size.moderateScale(100)}}>
-                  <Text style={style.label()}>{item.label}</Text>
+                  <Text style={style.labels()}>{item.label}</Text>
                 </View>
                 <View style={{marginHorizontal: 210}}>
                   {checked.includes(item.label) ? (
@@ -294,7 +291,7 @@ export default function Filter() {
             {items3.map((item, index) => (
               <View key={index} style={style.maincheckboxview2()}>
                 <View style={{width: size.moderateScale(100)}}>
-                  <Text style={style.label()}>{item.label}</Text>
+                  <Text style={style.labels()}>{item.label}</Text>
                 </View>
                 <View style={{marginHorizontal: 210}}>
                   {checked.includes(item.label) ? (
@@ -347,7 +344,6 @@ export default function Filter() {
       <TouchableOpacity onPress={() => setVisible(true)}>
         <View style={{width: 50, height: 50}}>
           <Text>open</Text>
-        
         </View>
       </TouchableOpacity>
     </View>

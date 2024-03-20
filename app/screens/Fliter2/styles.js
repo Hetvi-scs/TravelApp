@@ -1,4 +1,4 @@
-import {fontSize, fonts, lightTheme, size} from '../../theme';
+import {color, fontSize, fonts, lightTheme, size} from '../../theme';
 
 export const radio1 = () => ({
   // flexDirection: 'row',
@@ -37,4 +37,5 @@ export const maincheckboxview2 = () => ({
   });
 export const labels = () => ({
   fontSize: fontSize.small,
+color:color.black
 });
