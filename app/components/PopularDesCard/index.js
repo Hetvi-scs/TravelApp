@@ -265,13 +265,13 @@ export default function PopularDesCrad({
             <View
               style={{
                 flexDirection: 'row',
-                marginHorizontal: size.moderateScale(20),
+                marginHorizontal: size.moderateScale(13),
               }}>
               <Text
                 style={{
-                  fontSize: size.moderateScale(12),
+                  fontSize: size.moderateScale(11),
                   fontFamily: fonts.PoppinsRegular,
-                  color: color.lightgray,
+                  color: color.black,
                 }}>
                Starting at
               </Text>
@@ -280,6 +280,8 @@ export default function PopularDesCrad({
                   fontSize: fontSize.extrasmall,
                   color: color.black,
                   fontFamily: fonts.PoppinsMedium,
+                marginHorizontal: size.moderateScale(3),
+                  
                 }}>
                 $
               </Text>
@@ -334,25 +336,36 @@ export default function PopularDesCrad({
             }}>
          <View 
          style={{
-          flexDirection:'row'
+          flexDirection:'row',
+          // backgroundColor:'pink',
+          height:size.moderateScale(20),
+          width:size.moderateScale(81),
+          borderWidth:1,
+          borderColor:color.semigray,
+          justifyContent:'center',
+          alignSelf:'center',
+          alignItems:'center',
+          marginLeft:size.moderateScale(-16),
+          borderRadius:size.moderateScale(6),
          }}
          >   
             <Text
             style={{
-              fontSize: size.moderateScale(12),
-              fontFamily: fonts.PoppinsLight,
-              marginHorizontal:size.moderateScale(5),
-              color:color.black
+              fontSize: size.moderateScale(11),
+              fontFamily: fonts.PoppinsRegular,
+              // marginHorizontal:size.moderateScale(5),
+              color:color.black,
+             
             }}>
             {days} 
           </Text>
             <Text
               style={{
-                fontSize: fontSize.extrasmall,
-                color: color.gray,
-                fontFamily: fonts.PoppinsLight,
+                fontSize: size.moderateScale(11),
+                color: color.black,
+                fontFamily: fonts.PoppinsRegular,
               }}>
-             days tour
+              days tour
             </Text>
          </View>
           </View>

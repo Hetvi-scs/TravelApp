@@ -4,6 +4,7 @@ import Customheader from '../../components/CustomHeader'
 import { IcBank, IcCard, IcEmi, IcGpay, IcHeaderBackArrow, IcPhonepay, IcRightBlueArrow, IcRightsideArrow, IcUpi, IcWallet, color, images, size } from '../../theme'
 import * as style from './style'
 import DueComponent from '../../components/DueNowComponent'
+import Flatlistcompo from '../../components/Flatlistcompo'
 
 
 const list = [
@@ -33,33 +34,23 @@ export default function SelectPaymentMode() {
     <View style={style.container()}>
 
           <DueComponent/>
-
-
-          <View style={style.paymain()}>
+      <View style={style.paymain()}>
          <Text style={style.payopt()}>Payment options</Text>
-
-         <View style={style.itemview()}>
-            <FlatList
-                data={list}
-                renderItem={({item}) => (
-           <TouchableOpacity style={style.itemslist()}>
-
-           <View style={{marginHorizontal:size.moderateScale(12),}}>{item.img}</View>
-           <View style={style.titles()}><Text>{item.title}</Text></View>
-           <View style={style.sidearrow()}><IcRightBlueArrow/></View>
-            {/* <View style={{backgroundColor:'gray',height:2,width:'100%'}}></View> */}
-           </TouchableOpacity>
-          )}
+        <View>
+            <Flatlistcompo
+             data={list}
             />
-         </View>
-          </View>
+        </View>
+      </View>
+
+      <View>
+        <Text style={style.uppertxt()}>By proceeding, I understand and agree with the privacy policy,
+         </Text>
+         <Text style={style.uppertxt()}>the user agreement and terms of service of Tripify.</Text>
+      </View>
 
     </View>
-        
-
-</View>
-
-      
+</View>   
 </View>
   )
 }
