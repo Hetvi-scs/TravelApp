@@ -18,6 +18,7 @@ export default function Customheader({
   text3,
   img,
   onPress,
+  onPressl
 }) {
   if (type == 'first') {
     return (
@@ -30,7 +31,7 @@ export default function Customheader({
             <Text style={styles.text()}>{text}</Text>
           </View>
           <View>
-            <TouchableOpacity style={styles.text1touch()} onPress={onPress}>
+            <TouchableOpacity style={styles.text1touch()} onPress={onPressl}>
               <Text style={styles.text1()}>{text1}</Text>
             </TouchableOpacity>
           </View>
