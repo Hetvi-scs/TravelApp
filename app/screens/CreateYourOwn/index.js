@@ -4,6 +4,7 @@ import {color, fontSize, fonts, size} from '../../theme';
 import CreateOwn from '../../components/CreateOwn';
 import * as styles from './styles';
 import CustomButton from '../../components/CustomButton';
+import {useNavigation} from '@react-navigation/native';
 
 export default function CreateYourOwn() {
   const arr = [
@@ -24,6 +25,8 @@ export default function CreateYourOwn() {
       date: '16 jun 2023',
     },
   ];
+
+  const navigation = useNavigation();
 
   return (
     <View style={styles.mainView()}>
@@ -53,7 +56,13 @@ export default function CreateYourOwn() {
           height: size.moderateScale(50),
           marginHorizontal: size.moderateScale(25),
         }}>
-        <CustomButton type={'black'} text={'+Add Flight'} />
+        <CustomButton
+          type={'black'}
+          text={'+Add Flight'}
+          onPress={() => {
+            navigation.navigate('FlightBook');
+          }}
+        />
       </View>
     </View>
   );
