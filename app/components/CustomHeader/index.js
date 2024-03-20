@@ -9,50 +9,35 @@ import {
   fonts,
   size,
 } from '../../theme';
-
-export default function Customheader({type, text, text1, text2, text3, img}) {
+import * as styles from './styles';
+export default function Customheader({
+  type,
+  text,
+  text1,
+  text2,
+  text3,
+  img,
+  onPress,
+}) {
   if (type == 'first') {
     return (
       <View>
-        <View
-          style={{
-            flexDirection: 'row',
-            marginTop: size.moderateScale(30),
-            marginHorizontal: size.moderateScale(25),
-            justifyContent: 'space-between',
-          }}>
-          <View>{img}</View>
+        <View style={styles.mainview()}>
+          <TouchableOpacity onPress={onPress}>
+            <View>{img}</View>
+          </TouchableOpacity>
           <View style={{}}>
-            <Text
-              style={{fontFamily: fonts.PoppinsBold, fontSize: fontSize.large}}>
-              {text}
-            </Text>
+            <Text style={styles.text()}>{text}</Text>
           </View>
           <View>
-            <TouchableOpacity style={{marginTop: 3}}>
-              <Text
-                style={{
-                  color: color.orange,
-                  fontFamily: fonts.PoppinsBoldtailc,
-                }}>
-                {text1}
-              </Text>
+            <TouchableOpacity style={styles.text1touch()} onPress={onPress}>
+              <Text style={styles.text1()}>{text1}</Text>
             </TouchableOpacity>
           </View>
         </View>
 
-        <View
-          style={{
-            marginTop: size.moderateScale(10),
-            marginHorizontal: size.moderateScale(25),
-          }}>
-          <View
-            style={{
-              backgroundColor: color.lightgray,
-             // width: size.moderateScale(358),
-              height: size.moderateScale(1),
-             
-            }}></View>
+        <View style={styles.lineview()}>
+          <View style={styles.line()}></View>
         </View>
       </View>
     );
@@ -60,79 +45,42 @@ export default function Customheader({type, text, text1, text2, text3, img}) {
 
   if (type == 'second') {
     return (
-      <View style={{marginHorizontal:size.moderateScale(25), marginTop: size.moderateScale(20), }}>
+      <View style={styles.secondmainview()}>
         <View style={{}}>
-          <View
-            style={{
-              flexDirection: 'row',
-            // backgroundColor:'pink',
-            //  justifyContent:"center",
-             alignItems:'center',
-             alignContent:'flex-start'
-              // marginHorizontal: size.moderateScale(25),
-            }}>
-            <View style={{position:'absolute',zIndex:2,height:size.moderateScale(20), width:size.moderateScale(20),marginLeft:size.moderateScale(20) }}>{img}</View>
-            <View style={{justifyContent:'center', alignItems:'center',flex:1}}>
-              
-                <Text
-                  style={{
-                    fontFamily: fonts.PoppinsBold,
-                    fontSize: fontSize.medium,
-                    textAlign:"center",
-                    // marginHorizontal: size.moderateScale(100),
-                    color: color.white,
-                    marginTop:15
-                    //alignSelf:'center'
-                  }}>
-                  {text}
-                </Text>
-                <Text style={{marginHorizontal: size.moderateScale(90)}}>
-                  {text2}
-                </Text>
-                </View>
+          <View style={styles.secondmainsecondview()}>
+            <TouchableOpacity onPress={onPress}>
+              <View style={styles.secondimgview()}>{img}</View>
+            </TouchableOpacity>
+            <View style={styles.txtview()}>
+              <Text style={styles.txt()}>{text}</Text>
+              <TouchableOpacity onPress={onPress}>
+                <Text style={styles.txt2()}>{text2}</Text>
+              </TouchableOpacity>
             </View>
-         
-          <View
-            style={{
-              marginTop: size.moderateScale(0-5),
-              marginHorizontal: size.moderateScale(25),
-            }}>
-            <View
-              style={{
-                backgroundColor: color.lightgray,
-              //  width: size.moderateScale(358),
-                height: size.moderateScale(1),
-                //marginHorizontal: size.moderateScale(25),
-              }}></View>
+          </View>
+
+          <View>
+            <View style={styles.secondline()}></View>
           </View>
         </View>
       </View>
     );
   } else if (type == 'third') {
     return (
-      <View>
+      <View
+        style={styles.thirdmainview()}>
         <View
-          style={{
-            flexDirection: 'row',
-            marginTop: size.moderateScale(30),
-            marginHorizontal: size.moderateScale(25),
-            justifyContent: 'flex-start',
-          }}>
+          style={styles.thirdsecondview()}>
+          <TouchableOpacity onPress={onPress}>
+            <View
+              style={styles.thirdimgview()}>
+              {img}
+            </View>
+          </TouchableOpacity>
           <View
-            style={{
-              marginTop: size.moderateScale(9),
-              height: size.moderateScale(40),
-              width: size.moderateScale(40),
-            }}>
-            {img}
-          </View>
-          <View style={{marginHorizontal: size.moderateScale(100)}}>
+            style={styles.thirdtxtview()}>
             <Text
-              style={{
-                fontFamily: fonts.PoppinsSemiBold,
-                fontSize: fontSize.extralarge,
-                color: color.black,
-              }}>
+              style={styles.thirdtxt()}>
               {text3}
             </Text>
           </View>
