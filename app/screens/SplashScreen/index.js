@@ -13,10 +13,12 @@ import {
 } from '../../theme';
 import Rightwhitearrow from '../../theme/images/svg/Rightwhitearrow';
 import * as styles from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 export default function SplashScreen() {
+  const navigation=useNavigation();
   return (
-    <View>
+    <View style={{backgroundColor:color.white,flex:1}}>
       <StatusBar translucent backgroundColor={'transparent'}></StatusBar>
       <View style={styles.view()}>
         <View style={styles.mark()}>
@@ -36,7 +38,7 @@ export default function SplashScreen() {
             </Text>
           </View>
         </View>
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity onPress={() => {navigation.navigate('Bottomtab')}}>
           <View style={styles.btn()}>
             <IcRightwhitearrow />
           </View>
