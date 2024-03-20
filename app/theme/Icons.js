@@ -73,7 +73,9 @@ import Graysinglestar from './images/svg/Graysinglestar';
 import Whiteheart from './images/svg/Whiteheart';
 import Bluelocation from './images/svg/Bluelocation';
 import Rightwhitearrow from './images/svg/Rightwhitearrow';
-import CheckRight from './images/svg/CheckRight';
+import Smallcheck from './images/svg/Smallcheck';
+import Tower2 from './images/svg/Tower2';
+import Stays from './images/svg/Stays';
 
 export const IcRightwhitearrow = props => <Rightwhitearrow {...props} />;
 export const IcBeach = props => <Beach {...props} />;
@@ -129,9 +131,9 @@ export const IcPhonepay = props => <Phonepay {...props} />;
 export const IcHalfgraystar = props => <Halfgraystar {...props} />;
 export const IcGraysinglestar = props => <Graysinglestar {...props} />;
 export const IcWhiteheart = props => <Whiteheart {...props} />;
-
+export const IcTower2=props=><Tower2 {...props}/>
 export const IcBluelocation = props => <Bluelocation {...props} />;
-
+export const IcSmallcheck=props=><Smallcheck {...props}/>
 export const IcBlueDots = props => <BlueDots {...props} />;
 export const IcBluePlane = props => <BluePlane {...props} />;
 export const IcBookCabSearch = props => <BookCabSearch {...props} />;
@@ -153,4 +155,4 @@ export const IcLongRightBlueArrow = props => <LongRightBlueArrow {...props} />;
 export const IcOppositeArrow = props => <OppositeArrow {...props} />;
 export const IcSearchIndicator = props => <SearchIndicator {...props} />;
 export const IcTrustedPart = props => <TrustedPart {...props} />;
-export const IcCheckRight = props => <CheckRight {...props} />;
+export const IcStays=props=><Stays {...props}/>
