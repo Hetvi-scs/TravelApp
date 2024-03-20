@@ -8,5 +8,7 @@ export default function App() {
     <NavigationContainer>
       <MainStck />
     </NavigationContainer>
+   
+   
   );
 }

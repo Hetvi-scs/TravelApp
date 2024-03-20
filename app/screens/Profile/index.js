@@ -5,6 +5,7 @@ import {
   SectionList,
   FlatList,
   TouchableOpacity,
+  SafeAreaView,
 } from 'react-native';
 import React from 'react';
 import Customheader from '../../components/CustomHeader';
@@ -41,6 +42,7 @@ export default function Profile() {
   ];
  
   return (
+    <SafeAreaView>
     <View style={{marginTop:size.moderateScale(40)}}>
       <View>
         <Text
@@ -80,5 +82,6 @@ export default function Profile() {
        />
       </View>
     </View>
+    </SafeAreaView>
   );
 }
