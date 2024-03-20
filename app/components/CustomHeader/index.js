@@ -21,12 +21,19 @@ export default function Customheader({
 }) {
   if (type == 'first') {
     return (
-      <View>
+      <View style={{}}>
         <View style={styles.mainview()}>
-          <TouchableOpacity onPress={onPress}>
+          <TouchableOpacity
+            onPress={onPress}
+            style={{marginTop: size.moderateScale(7),}}>
             <View>{img}</View>
           </TouchableOpacity>
-          <View style={{}}>
+          <View
+            style={{
+              justifyContent: 'center',
+              backgroundColor: 'red',
+              alignSelf: 'center',
+            }}>
             <Text style={styles.text()}>{text}</Text>
           </View>
           <View>
@@ -52,7 +59,9 @@ export default function Customheader({
               <View style={styles.secondimgview()}>{img}</View>
             </TouchableOpacity>
             <View style={styles.txtview()}>
-              <Text style={styles.txt()}>{text}</Text>
+              <View style={{}}>
+                <Text style={styles.txt()}>{text}</Text>
+              </View>
               <TouchableOpacity onPress={onPress}>
                 <Text style={styles.txt2()}>{text2}</Text>
               </TouchableOpacity>
@@ -67,22 +76,13 @@ export default function Customheader({
     );
   } else if (type == 'third') {
     return (
-      <View
-        style={styles.thirdmainview()}>
-        <View
-          style={styles.thirdsecondview()}>
+      <View style={styles.thirdmainview()}>
+        <View style={styles.thirdsecondview()}>
           <TouchableOpacity onPress={onPress}>
-            <View
-              style={styles.thirdimgview()}>
-              {img}
-            </View>
+            <View style={styles.thirdimgview()}>{img}</View>
           </TouchableOpacity>
-          <View
-            style={styles.thirdtxtview()}>
-            <Text
-              style={styles.thirdtxt()}>
-              {text3}
-            </Text>
+          <View style={styles.thirdtxtview()}>
+            <Text style={styles.thirdtxt()}>{text3}</Text>
           </View>
         </View>
       </View>
